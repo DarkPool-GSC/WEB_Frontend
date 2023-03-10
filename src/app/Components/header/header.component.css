@@ -11,15 +11,18 @@
 
 }
 .navbar a{
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     text-decoration: none;
     color: white;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin: 0 0.2rem;
     transition: all 0.4s ease-in-out;
 }
 .navbar a:hover{
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: rgb(189, 189, 189);
 }
 
 .mobile-hamburger{
@@ -39,15 +42,17 @@
 .dropdown{
     display: none;
 }
-.nav-dropdown p{
+.nav-dropdown a{
+    text-decoration: none;
     margin: 0;
     cursor: pointer;
+    color: white;
     /* padding-top: 0.5rem; */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
-.nav-dropdown p:hover{
+.nav-dropdown a:hover{
     color:rgb(17 24 39);
     background-color: rgb(155, 155, 155);
 }
