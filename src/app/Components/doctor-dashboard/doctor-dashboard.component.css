@@ -4,6 +4,7 @@
     border-radius: 100%;
 }
 .doctor-dashboard{
+    min-height: 100vh;
     background-color: rgb(212, 212, 212);
 }
 .doctor-first-row{
@@ -171,4 +172,37 @@
 }
 .medicine-add-button{
     margin-right: 1rem;
+}
+@media screen and (max-width:  800px){
+   .doctor-first-row{
+    flex-direction: column;
+    }
+    .patient-personal-details{
+        width: auto;
+        padding : 0 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        /* padding: 0 1rem; */
+    }
+    .doctor-second-row{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .second-row-notes-div{
+        width: auto;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width :  500px){
+    .patient-personal-details{
+        flex-direction: column;
+    }
+    .personal-patient-info{
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .lasvisit-patient-info{
+        width: auto;
+        margin-left: 0;
+    }
 }
