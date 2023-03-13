@@ -5,6 +5,7 @@
     justify-content: center;
     padding: 2rem;
 }
+
 .login-logo{
     height: 2rem;
     width: 2rem;
@@ -121,4 +122,30 @@
     margin-top: 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
+}
+@media screen and (max-width : 800px){
+    .login-bg{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-from{
+        width: 100%;
+    }
+    .side-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .login-bg{
+        padding: 4rem 0;
+    }
+    .login-from{
+        max-width: none;
+        width: -webkit-fill-available;
+        border-radius: 0;
+        padding: 2rem 1rem;
+
+    }
 }
