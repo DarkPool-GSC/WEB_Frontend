@@ -109,7 +109,7 @@
 .forgot-div label{
     margin: 0;
 }
-.forgot-div span{
+.forgot-div a{
     color:#4f85e2;
     font-size: 0.8rem;
 }

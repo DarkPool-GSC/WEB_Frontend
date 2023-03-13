@@ -18,6 +18,7 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
+import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { VerifyEmailComponent } from './Components/verify-email/verify-email.com
     LoginComponent,
     RegisterComponent,
     VerifyEmailComponent,
+    ForgetPasswordComponent,
     
   ],
   imports: [

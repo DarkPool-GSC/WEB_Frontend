@@ -1,10 +1,4 @@
 import { Injectable, NgZone } from '@angular/core';
-// import { AngularFireAuth } from '@angular/fire/compat/auth';
-// import * as auth from 'firebase/auth';
-// import {
-//   AngularFirestore,
-//   AngularFirestoreDocument,
-// } from '@angular/fire/compat/firestore';
 
 import { Firestore, collectionData, collection, doc, setDoc } from '@angular/fire/firestore';
 import {   Auth,
@@ -19,7 +13,6 @@ import {   Auth,
   user
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { User } from './user';
 @Injectable({
   providedIn: 'root'
@@ -52,7 +45,6 @@ export class AuthService {
             return;
           }
           else{
-
             this.router.navigate(['dashboard'])
           }
         }
@@ -123,14 +115,5 @@ export class AuthService {
           window.alert(error);
         })
   }
-  
-  // async AuthLogin(provider : any) {
-  //   return this.fireAuth.signInWithPopup(provider).then((result) =>{
-  //     this.router.navigate(['dashboard']);
-  //     this.setUser(result.user);
 
-  //   }).catch((error)=>{
-  //     window.alert(error);
-  //   })
-  // }
 }
