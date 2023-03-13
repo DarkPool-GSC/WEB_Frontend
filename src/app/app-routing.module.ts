@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './Components/about/about.component';
 import { TeamComponent } from './Components/team/team.component';
+import { LoginComponent } from './Components/login/login.component';
+import { RegisterComponent } from './Components/register/register.component';
 import { DoctorDashboardComponent } from './Components/doctor-dashboard/doctor-dashboard.component';
+import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
 const routes: Routes = [
   {
     path:'about', component: AboutComponent
@@ -11,9 +14,12 @@ const routes: Routes = [
   {
     path : 'team', component : TeamComponent
   },
+  {path: 'login', component : LoginComponent},
+  {path: 'register', component : RegisterComponent},
+  {path: 'verify-email', component : VerifyEmailComponent},
   {
-    path : '', component : DoctorDashboardComponent
-  }
+    path : 'dashboard', component : DoctorDashboardComponent
+  },
 ];
 
 @NgModule({
