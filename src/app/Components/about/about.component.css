@@ -21,14 +21,99 @@
     background-color: #20B5B5;
     color: white;
     margin: 0;
-    height: 18vh;
+    height: 15vh;
 }
 
-
-ul {
+.stats {
     list-style: none;
+    display: flex;
+    align-items: center;
     margin: 0;
 }
 
+.stat-item {
+    padding-left: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-big {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.stat-small {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.section {
+    padding-top: 7rem;
+    padding-left: 4rem;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.s1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.s1 li {
+    border: solid;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    padding: 2rem;
+}
+
+.s1-head {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+
+}
+
+.s1-content {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+
+.s2 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.s2-img {
+    height: 40vh;
+    border-radius: 3rem;
+    margin-right: 5rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.s2-sublist {
+    padding-top: 1rem;
+    list-style:disc;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.s2-sublist li {
+    margin: 1rem;
+}
 
 
