@@ -20,6 +20,8 @@
 .header-bottom {
     background-color: #20B5B5;
     color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     margin: 0;
     height: 15vh;
 }
@@ -52,7 +54,8 @@
 }
 
 .section {
-    padding-top: 7rem;
+    margin-top: 4rem;
+    padding: 3rem;
     padding-left: 4rem;
 }
 
@@ -116,4 +119,80 @@ ul {
     margin: 1rem;
 }
 
+.s3 {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.s3-sublist li {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+.s3-img {
+    width: 40vw;
+    margin-right: 5rem;
+    border-radius: 3rem;
+}
+
+.bg {
+    background-color: #DCFFFF;
+}
+
+.s4 {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s4-sublist {
+    padding-right: 7rem;
+}
+
+.s4-sublist li {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+.s4-img {
+    width: 40vw;
+    margin-right: 4rem;
+    border-radius: 3rem;
+}
+
+.footer {
+    background-color: #20B5B5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+    padding-left: 4rem;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-list-left {
+    list-style: none;
+    width: 25vw;
+}
+
+.f-list-right {
+    list-style: none;
+}
+
+.footer-heading {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.footer-img {
+    width: 25vh;
+}
