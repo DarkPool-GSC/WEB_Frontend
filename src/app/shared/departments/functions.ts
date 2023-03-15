@@ -22,9 +22,11 @@ export class patientservice{
         const patientref = doc(this.firestore,`patients/${patient.uid}`);
         const displayname = firebase.auth().currentUser?.displayName
         const id = firebase.auth().currentUser?.uid
+        patient.uid = id
         const Image = firebase.auth().currentUser?.photoURL
+        patient.image_fieldurl = Image
         const patientData: Patient = {
-                   uid:patient.id,
+                   uid:patient.uid,
                    display_name:patient.displayname,
                    Age:patient.Age,
                    Weight:patient.Weight,
@@ -36,7 +38,7 @@ export class patientservice{
                    Notes:patient.Notes,
                    Medication_name:patient.Medication_name,
                    Medication_Dose:patient.Medication_Dose,
-                   image_fieldurl:patient.Image
+                   image_fieldurl:patient.image_fieldurl
                 }
                 return setDoc(patientref,patientData,{
                     merge:true,
@@ -55,13 +57,16 @@ export class patientservice{
         })
      }
 
-    async UpdatePatient(patient:Patient){
+    async UpdatePatient(patientdata){
         const db = getFirestore()
         const ID = firebase.auth().currentUser?.uid
         const docref = doc(db,'patients','ID')
-        await updateDoc(docref,{
-        patient
-        });
-    }
+        await updateDoc(docref,patientdata).then(docref =>{
+            console.log('Patient information has been updated')
+        }).catch(error =>{
+            console.log(error)
+        })
+        }
 }
+
 
