@@ -5,6 +5,7 @@ import { merge } from 'rxjs';
 import firebase from 'firebase/compat';
 import { Patient} from './models';
 import {  } from 'firebase/auth';
+import { getDocs } from 'firebase/firestore';
 import { deleteDoc, getDoc, getFirestore, updateDoc } from 'firebase/firestore';
 import { user } from '@angular/fire/auth';
 import { async } from '@firebase/util';
@@ -57,7 +58,7 @@ export class patientservice{
         })
      }
 
-    async UpdatePatient(patientdata){
+    async UpdatePatient(patientdata:any){
         const db = getFirestore()
         const ID = firebase.auth().currentUser?.uid
         const docref = doc(db,'patients','ID')
@@ -67,6 +68,26 @@ export class patientservice{
             console.log(error)
         })
         }
+
+    async GetPatient(i_d:string){
+        const db = getFirestore()
+        const docref = doc(db,'patients','i_d')
+        const docsnap = await getDoc(docref)
+        if(docsnap.exists()){
+            console.log('Patient Data:',docsnap.data())
+        }else{
+            console.log('No such documents')
+        }
+    }
+
+    async GetAllPatients(){
+        const db = getFirestore()
+        const colref = collection(db,'patients')
+        const docsnap = await getDocs(colref)
+        docsnap.forEach(doc =>{
+            console.log(doc.data())
+        })
+    }
 }
 
 
