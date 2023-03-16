@@ -3,22 +3,20 @@ import { Firestore, collectionData, collection, doc, setDoc } from '@angular/fir
 import { Router } from '@angular/router';
 import { merge } from 'rxjs';
 import firebase from 'firebase/compat';
-import { Patient} from './models';
-import {  } from 'firebase/auth';
+import { Patient} from '../models/patient';
 import { deleteDoc, getDoc, getFirestore, updateDoc } from 'firebase/firestore';
-import { user } from '@angular/fire/auth';
-import { async } from '@firebase/util';
+import { User } from '../models/user';
+
 export class patientservice{
     patientdata:any
     constructor(
         private firestore:Firestore,
         private router:Router,
         private ngzone:NgZone
-    ){ (patient:Patient) =>{
-       this.patientdata = patient
-    }
-    }
+    ) {}
+    
     setPatient(patient:any){
+       
         const patientref = doc(this.firestore,`patients/${patient.uid}`);
         const displayname = firebase.auth().currentUser?.displayName
         const id = firebase.auth().currentUser?.uid
