@@ -13,7 +13,7 @@ import {   Auth,
   user
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { User } from './user';
+import { User } from '../models/user';
 @Injectable({
   providedIn: 'root'
 })

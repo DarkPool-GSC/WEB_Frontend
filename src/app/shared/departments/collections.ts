@@ -1,6 +1,7 @@
 import { collection, CollectionReference } from "firebase/firestore";
 import { getFirestore,DocumentData } from "firebase/firestore";
-import { Patient } from "./models";
+import { Patient,Doctor,Department } from "./models";
+
 export const db = getFirestore()
 const createCollection = <T = DocumentData>
 (collectionName:string) =>{
@@ -8,3 +9,5 @@ const createCollection = <T = DocumentData>
 }
 
 export const patientCol = createCollection<Patient>('patients')
+export const DoctorCol = createCollection<Doctor>('doctors')
+export const DepartmentCol = createCollection<Department>('department/${}')

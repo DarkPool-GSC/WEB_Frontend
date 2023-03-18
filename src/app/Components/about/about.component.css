@@ -20,6 +20,8 @@
 .header-bottom {
     background-color: #20B5B5;
     color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     margin: 0;
     height: 15vh;
 }
@@ -52,13 +54,15 @@
 }
 
 .section {
-    padding-top: 7rem;
+    margin-top: 2rem;
+    padding: 3rem;
     padding-left: 4rem;
 }
 
 .section-heading {
     font-size: 2.5rem;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .s1 {
@@ -116,4 +120,118 @@ ul {
     margin: 1rem;
 }
 
+.s3 {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.s3-sublist li {
+    list-style: none;
+    padding-bottom: 1rem;
+}
+
+.s3-img {
+    width: 40vw;
+    margin-right: 5rem;
+    border-radius: 3rem;
+}
+
+.bg {
+    background-color: #DCFFFF;
+}
+
+.s4 {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s4-sublist {
+    padding-right: 7rem;
+}
+
+.s4-sublist li {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+.s4-img {
+    width: 40vw;
+    margin-right: 4rem;
+    border-radius: 3rem;
+}
+
+.footer {
+    background-color: #20B5B5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+    padding-left: 4rem;
+}
+
+.footer-list {
+    list-style: none;
+    align-items: left;
+    width: 60vw;
+}
+
+.footer-heading {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.footer-img {
+    width: 25vh;
+}
+
+.footer-content {
+    font-weight: 300;
+    width: 30vw;
+}
+
+.highlight {
+    color: #20B5B5;
+}
+
+.icon {
+    width: 2vw;
+}
+
+@media screen and (max-width:  800px){
+    .s1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+    }
+
+    .s2 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .s3 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .s4 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .footer-content{
+        width: 30rem;
+    }
+ }
