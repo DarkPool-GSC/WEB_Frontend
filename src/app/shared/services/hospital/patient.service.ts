@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Firestore, collectionData, collection, doc, setDoc, deleteDoc, updateDoc } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, doc, setDoc, deleteDoc, updateDoc,getDoc,getDocs } from '@angular/fire/firestore';
 import { Auth } from '@angular/fire/auth';
 import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
@@ -49,10 +49,31 @@ async deletePatient(id:string){
     })
  }
 
-async UpdatePatient(patient:any){
-    const docref = doc(this.firestore,'patients',patient.id)
-    await updateDoc(docref,{
-    patient
-    });
+async UpdatePatient(id:string,patient:any){
+    const docref = doc(this.firestore,'patients',id)
+    await updateDoc(docref,patient).then(()=>{
+      console.log('Patient updated succesfully')
+    }).catch(error => {
+      console.log(error)
+    })
 }
+
+async GetPatient(i_d:string){
+  const docref = doc(this.firestore,'patients',i_d)
+  const docsnap = await getDoc(docref)
+  if(docsnap.exists()){
+      console.log('Patient Data:',docsnap.data())
+  }else{
+      console.log('No such documents')
+  }
+}
+
+async GetAllPatients(){
+  const colref = collection(this.firestore,'patients')
+  const docsnap = await getDocs(colref)
+  docsnap.forEach(doc =>{
+      console.log(doc.data())
+  })
+}
+
 }
