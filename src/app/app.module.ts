@@ -31,7 +31,6 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     RegisterComponent,
     VerifyEmailComponent,
     ForgetPasswordComponent,
-    
   ],
   imports: [
     BrowserModule,

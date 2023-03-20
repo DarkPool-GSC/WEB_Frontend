@@ -1,3 +1,5 @@
+
+
 .header-top {
     background-color: #DCFFFF;
     height: 75vh;
@@ -91,6 +93,14 @@
     font-weight: 300;
 }
 
+.s1 li:hover {
+    background-color: #20B5B5;
+    color: white;
+}
+
+li:hover svg{
+    fill: white;
+}
 
 .s2 {
     list-style: none;
@@ -124,7 +134,6 @@ ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .s3-sublist li {
@@ -196,9 +205,11 @@ ul {
     color: #20B5B5;
 }
 
-.icon {
-    width: 2vw;
+svg {
+    width: 4vw;
+    height: 4vh;
 }
+
 
 @media screen and (max-width:  800px){
     .s1 {

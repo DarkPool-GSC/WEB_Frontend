@@ -54,6 +54,36 @@
     color:rgb(17 24 39);
     background-color: rgb(155, 155, 155);
 }
+
+.heading {
+    margin-left: 3rem;
+    font-size: x-large;
+    margin-top: 2rem;
+}
+
+.search-patient {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.list-patients {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.rows {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.display {
+    width: 80vw;
+    height: 80vh;
+}
+
 @media screen and (max-width:  480px){
     .mobile-hamburger{
         display: flex;
