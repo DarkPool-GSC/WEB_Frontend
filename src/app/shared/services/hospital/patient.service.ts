@@ -4,6 +4,7 @@ import { Auth } from '@angular/fire/auth';
 import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat';
+import { AuthService } from '../auth.service';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,18 +17,14 @@ export class PatientService {
     private firebase : Auth
     
   ) { }
-  async registerpatient(e_mail:string,n_ame:string){
-    if((firebase.auth().currentUser?.uid) != null){
-    const id = firebase.auth().currentUser?.uid
-    const p:any = {
-          email:e_mail,
-          display_name:n_ame,
-          uid:id,
-    }
-    this.setPatient(p);
-  }else{
-    console.log("User not found")
-  }
+  async registerpatient(e_mail:string,pass_word:string){
+     const pref = AuthService.Register(e_mail,pass_word)
+     const uid = pref.uid
+     const p:any = {
+         email:e_mail,
+         id:uid,
+     }
+     this.setPatient(p)
   }
   setPatient(patient:any){
        
