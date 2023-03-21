@@ -13,4 +13,5 @@ export interface Patient {
     Medication_name:string;
     Medication_Dose:number;
     email:string,
+    email_verified:boolean;
 }

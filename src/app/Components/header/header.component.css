@@ -3,8 +3,8 @@
     /* width: 100%; */
     justify-content: space-between;
     /* background-color: #252020; */
-    background-color : rgb(17 24 39);
-    color:aliceblue;
+    background-color : #DCFFFF;
+    color: #20B5B5;
     padding: 1rem;
 
 
@@ -12,7 +12,7 @@
 .navbar a{
     /* margin-left: 2rem; */
     text-decoration: none;
-    color: white;
+    color: #20B5B5;
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
@@ -20,8 +20,8 @@
     transition: all 0.4s ease-in-out;
 }
 .navbar a:hover{
-    color: black;
-    background-color: rgb(189, 189, 189);
+    color: white;
+    background-color: #20B5B5;
 }
 
 .mobile-hamburger{

@@ -26,25 +26,26 @@ export class PatientService {
      })
   }
   
-  setPatient(patient:any){
+  setPatient(patient : any){
        
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
-               uid:patient.id,
+               uid:patient.id||null,
                email:patient.email,
-               display_name:patient.displayname,
-               Age:patient.Age,
-               Weight:patient.Weight,
-               Phone_No:patient.Phone_No,
-               Ailments:patient.Ailments,
-               Last_Visit:patient.Last_Visit,
-               Pulse:patient.Pulse,
-               Blood_Pressure:patient.Blood_Pressure,
-               Notes:patient.Notes,
-               Medication_name:patient.Medication_name,
-               Medication_Dose:patient.Medication_Dose,
-               image_fieldurl:patient.Image
+               display_name:patient.display_name||null,
+               Age:patient.Age||null,
+               Weight:patient.Weight||null,
+               Phone_No:patient.Phone_No||null,
+               Ailments:patient.Ailments||null,
+               Last_Visit:patient.Last_Visit||null,
+               Pulse:patient.Pulse||null,
+               Blood_Pressure:patient.Blood_Pressure||null,
+               Notes:patient.Notes||null,
+               Medication_name:patient.Medication_name||null,
+               Medication_Dose:patient.Medication_Dose||null,
+               image_fieldurl:patient.Image||null,
+               email_verified:patient.emailVerified||null
             }
             return setDoc(patientRef,patientData,{
                 merge:true,
