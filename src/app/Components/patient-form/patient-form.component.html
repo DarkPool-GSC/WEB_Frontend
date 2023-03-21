@@ -4,13 +4,19 @@
         Add New Patient
     </div>
         <div class="detail">
-            <input type="name" placeholder="name" class="placeholder" name="name" #name>
+            <input type="name" placeholder="Name" class="placeholder" name="name" #name>
         </div>
         <div class="detail">
-            <input type="number" placeholder="age" class="placeholder" name="age" #age>
+            <input type="number" placeholder="Age" class="placeholder" name="age" #age>
+        </div>
+        <div class="detail">
+            <input type="email" placeholder="Email" class="placeholder" name="email" #age>
+        </div>
+        <div class="detail">
+            <input type="number" placeholder="Phone No." class="placeholder" name="phone" #age>
         </div>
         <button type="submit" 
         (click)="patientservice.registerpatient(name.value, age.value)"
-        class="submit-button">Sign in</button>
+        class="submit-button">Save</button>
     </div>
 </div>
