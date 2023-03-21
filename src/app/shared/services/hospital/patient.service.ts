@@ -3,6 +3,7 @@ import { Firestore, collectionData, collection, doc, setDoc, deleteDoc, updateDo
 import { Auth } from '@angular/fire/auth';
 import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
+import firebase from 'firebase/compat';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,14 +14,28 @@ export class PatientService {
     private router:Router,
     private ngzone:NgZone,
     private firebase : Auth
-
+    
   ) { }
+  async registerpatient(e_mail:string,n_ame:string){
+    if((firebase.auth().currentUser?.uid) != null){
+    const id = firebase.auth().currentUser?.uid
+    const p:any = {
+          email:e_mail,
+          display_name:n_ame,
+          uid:id,
+    }
+    this.setPatient(p);
+  }else{
+    console.log("User not found")
+  }
+  }
   setPatient(patient:any){
        
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
                uid:patient.id,
+               email:patient.email,
                display_name:patient.displayname,
                Age:patient.Age,
                Weight:patient.Weight,
