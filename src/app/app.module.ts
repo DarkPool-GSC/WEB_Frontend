@@ -19,6 +19,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { SearchComponent } from './Components/search/search.component';
+import { PatientFormComponent } from './Components/patient-form/patient-form.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
     RegisterComponent,
     VerifyEmailComponent,
     ForgetPasswordComponent,
+    SearchComponent,
+    PatientFormComponent,
   ],
   imports: [
     BrowserModule,

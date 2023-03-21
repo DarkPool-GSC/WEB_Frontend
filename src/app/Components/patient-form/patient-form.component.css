@@ -1,0 +1,45 @@
+.container {
+    width: 20vw;
+    height: 30vh;
+    background: #20B5B5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 3rem;
+}
+
+.sign-up-heading {
+    font-size: 1.5rem;
+}
+
+.detail {
+    width: 100%;
+}
+
+.placeholder {
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 0.25rem ;
+}
+
+button {
+    border: none;
+    background-color:white;
+    color: #20B5B5;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.2rem;
+}
+

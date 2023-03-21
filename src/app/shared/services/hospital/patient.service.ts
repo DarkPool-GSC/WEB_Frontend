@@ -5,27 +5,27 @@ import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat';
 import { AuthService } from '../auth.service';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 @Injectable({
   providedIn: 'root'
 })
 export class PatientService {
 
   constructor(
-    private firestore:Firestore,
+    private firestore:Firestore,                                    
     private router:Router,
     private ngzone:NgZone,
     private firebase : Auth
     
   ) { }
   async registerpatient(e_mail:string,pass_word:string){
-     const pref = AuthService.Register(e_mail,pass_word)
-     const uid = pref.uid
-     const p:any = {
-         email:e_mail,
-         id:uid,
-     }
-     this.setPatient(p)
+     return signInWithEmailAndPassword(this.firebase,e_mail,pass_word).then((result) => {
+      this.setPatient(result.user)
+     }).catch((error) =>{
+      console.log(error)
+     })
   }
+  
   setPatient(patient:any){
        
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
