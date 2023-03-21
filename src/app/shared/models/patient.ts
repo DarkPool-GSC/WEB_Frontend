@@ -2,7 +2,7 @@ export interface Patient {
     uid:string;
     display_name: string;
     image_fieldurl:string;
-    Age:number;
+    Age:string;
     Weight:number;
     Phone_No:number;
     Ailments:string;

@@ -3,24 +3,25 @@ import { Firestore, collectionData, collection, doc, setDoc, deleteDoc, updateDo
 import { Auth } from '@angular/fire/auth';
 import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
-import firebase from 'firebase/compat';
+import firebase from 'firebase/compat/app';
+//import { AuthService,Register } from 'src/app/shared/services/auth.service';
 @Injectable({
   providedIn: 'root'
 })
 export class PatientService {
 
   constructor(
-    private firestore:Firestore,
+    private firestore:Firestore,                                    
     private router:Router,
     private ngzone:NgZone,
     private firebase : Auth
     
   ) { }
-  async registerpatient(e_mail:string,n_ame:string){
+  async registerpatient(n_ame:string, age:string){
     if((firebase.auth().currentUser?.uid) != null){
     const id = firebase.auth().currentUser?.uid
     const p:any = {
-          email:e_mail,
+          Age:age,
           display_name:n_ame,
           uid:id,
     }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { PatientService } from 'src/app/shared/services/hospital/patient.service';
 
 @Component({
   selector: 'app-patient-form',
@@ -7,5 +7,5 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./patient-form.component.css']
 })
 export class PatientFormComponent {
-  constructor(public authService :AuthService){}
+  constructor(public patientservice :PatientService){}
 }
