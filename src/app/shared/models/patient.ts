@@ -12,4 +12,5 @@ export interface Patient {
     Notes:string[];
     Medication_name:string;
     Medication_Dose:number;
+    email:string,
 }

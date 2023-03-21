@@ -11,7 +11,7 @@ export class ReportService {
   constructor(private firestore : Firestore) {
     this.report = {}
    }
-  genrateReport(instructions : string, medicines : Medicines[], patient : any){
+  genrateReport(instructions : string,patient : any){
     const reportCollection = collection(this.firestore, `patient/${patient.id}/report`);
     const report : Report = {
       patientId : patient.id,
@@ -24,6 +24,12 @@ export class ReportService {
     const reportCollectionRef = collection(this.firestore, `patient/${patientID}/report`);
     const querySnapshot = await getDocs(reportCollectionRef);
     this.report = querySnapshot;
+  }
+  
+  async Addmedicines(id:string,medicine:Medicines[]){
+    const colref = collection(this.firestore,'id/report')
+    const docref = doc(this.firestore,`id/report/${medicine}`)
+    
   }
 
 }
