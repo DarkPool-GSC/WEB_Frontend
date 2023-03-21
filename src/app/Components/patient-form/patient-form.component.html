@@ -1,0 +1,16 @@
+<div class="signup">
+    <div class="container">
+    <div class="sign-up-heading">
+        Add New Patient
+    </div>
+        <div class="detail">
+            <input type="email" placeholder="email" id="email" name="email" #email>
+        </div>
+        <div class="detail">
+            <input type="password" placeholder="password" id="password" name="password" #password>
+        </div>
+        <button type="submit" 
+        (click)="authService.Register(email.value, password.value)"
+        class="submit-button">Sign in</button>
+    </div>
+</div>
