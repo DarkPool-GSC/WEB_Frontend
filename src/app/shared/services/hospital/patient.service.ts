@@ -5,6 +5,7 @@ import { Patient } from '../../models/patient';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat';
 import { AuthService } from '../auth.service';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,39 +19,36 @@ export class PatientService {
     
   ) { }
   async registerpatient(e_mail:string,pass_word:string){
-     const pref = AuthService.Register(e_mail,pass_word)
-     const uid = pref.uid
-     const p:any = {
-         email:e_mail,
-         id:uid,
-     }
-     this.setPatient(p)
+     return signInWithEmailAndPassword(this.firebase,e_mail,pass_word).then((result) => {
+      this.setPatient(result.user)
+      window.alert(`Account created succesfully!!, your patient ID is ${result.user.uid}`)
+     }).catch((error) =>{
+      console.log(error)
+     })
   }
   setPatient(patient:any){
        
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
-               uid:patient.id,
+               uid:patient.uid,
                email:patient.email,
                display_name:patient.displayname,
                Age:patient.Age,
-               Weight:patient.Weight,
                Phone_No:patient.Phone_No,
                Ailments:patient.Ailments,
-               Last_Visit:patient.Last_Visit,
-               Pulse:patient.Pulse,
-               Blood_Pressure:patient.Blood_Pressure,
                Notes:patient.Notes,
                Medication_name:patient.Medication_name,
                Medication_Dose:patient.Medication_Dose,
-               image_fieldurl:patient.Image
+               image_fieldurl:patient.photoURL,
+               email_verified:patient.emailVerified
             }
             return setDoc(patientRef,patientData,{
                 merge:true,
             });
 
 }
+
 
 async deletePatient(id:string){
     const docref = doc(this.firestore,'patients',id)
