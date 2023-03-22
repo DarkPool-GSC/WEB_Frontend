@@ -21,7 +21,7 @@ export class PatientService {
   async registerpatient(e_mail:string,pass_word:string){
      return signInWithEmailAndPassword(this.firebase,e_mail,pass_word).then((result) => {
       this.setPatient(result.user)
-      window.alert(`Your patient id is ${result.user.uid}`)
+      window.alert(`Account created succesfully!!, your patient ID is ${result.user.uid}`)
      }).catch((error) =>{
       console.log(error)
      })
@@ -36,12 +36,8 @@ export class PatientService {
                email:patient.email,
                display_name:patient.display_name||null,
                Age:patient.Age||null,
-               Weight:patient.Weight||null,
                Phone_No:patient.Phone_No||null,
                Ailments:patient.Ailments||null,
-               Last_Visit:patient.Last_Visit||null,
-               Pulse:patient.Pulse||null,
-               Blood_Pressure:patient.Blood_Pressure||null,
                Notes:patient.Notes||null,
                Medication_name:patient.Medication_name||null,
                Medication_Dose:patient.Medication_Dose||null,
@@ -54,6 +50,7 @@ export class PatientService {
 
 }
 
+
 async deletePatient(id:string){
     const docref = doc(this.firestore,'patients',id)
     await deleteDoc(docref).then(() =>{
@@ -63,6 +60,15 @@ async deletePatient(id:string){
     })
  }
 
+async get_updated_patient(id:string,name:string,age:number,phoneno:string,ailments:string){
+   const P:any = {
+          display_name:name||null,
+          Age:age||null,
+          Phone_no:phoneno||null,
+          Ailments:ailments||null,
+   }    
+   this.UpdatePatient(id,P)
+}
 async UpdatePatient(id:string,patient:any){
     const docref = doc(this.firestore,'patients',id)
     await updateDoc(docref,patient).then(()=>{

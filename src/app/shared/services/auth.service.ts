@@ -54,7 +54,7 @@ export class AuthService {
    })
   }
 
-  async Register(email: string, password : string){
+ async Register(email: string, password : string){
     return createUserWithEmailAndPassword(this.fireAuth,email,password).then((result)=>{
       this.SendVerificationMail();
       this.setUser(result.user);
