@@ -21,6 +21,7 @@ export class PatientService {
   async registerpatient(e_mail:string,pass_word:string){
      return signInWithEmailAndPassword(this.firebase,e_mail,pass_word).then((result) => {
       this.setPatient(result.user)
+      window.alert(`Your patient id is ${result.user.uid}`)
      }).catch((error) =>{
       console.log(error)
      })

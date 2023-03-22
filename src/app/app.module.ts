@@ -21,6 +21,9 @@ import { VerifyEmailComponent } from './Components/verify-email/verify-email.com
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { SearchComponent } from './Components/search/search.component';
 import { PatientFormComponent } from './Components/patient-form/patient-form.component';
+import { PatientDetailsComponent } from './Components/patient-details/patient-details.component';
+import { ParentComponent } from './Components/parent/parent.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { PatientFormComponent } from './Components/patient-form/patient-form.com
     ForgetPasswordComponent,
     SearchComponent,
     PatientFormComponent,
+    PatientDetailsComponent,
+    ParentComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { PatientFormComponent } from './Components/patient-form/patient-form.com
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions())
+    provideFunctions(() => getFunctions()),
+    BrowserAnimationsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
