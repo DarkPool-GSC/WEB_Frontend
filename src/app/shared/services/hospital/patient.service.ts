@@ -32,12 +32,10 @@ export class PatientService {
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
- 
                uid:patient.id||null,
                email:patient.email,
                display_name:patient.display_name||null,
                Age:patient.Age||null,
-               Weight:patient.Weight||null,
                Phone_No:patient.Phone_No||null,
                Ailments:patient.Ailments||null,
                Notes:patient.Notes||null,
@@ -62,6 +60,15 @@ async deletePatient(id:string){
     })
  }
 
+async get_updated_patient(id:string,name:string,age:number,phoneno:string,ailments:string){
+   const P:any = {
+          display_name:name||null,
+          Age:age||null,
+          Phone_no:phoneno||null,
+          Ailments:ailments||null,
+   }    
+   this.UpdatePatient(id,P)
+}
 async UpdatePatient(id:string,patient:any){
     const docref = doc(this.firestore,'patients',id)
     await updateDoc(docref,patient).then(()=>{
