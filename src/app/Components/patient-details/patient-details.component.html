@@ -3,20 +3,23 @@
     <div class="sign-up-heading">
         Add Patient Details
     </div>
-        <!--<div class="detail">
-            <input type="name" placeholder="Name" class="placeholder" name="name" #name>
+        <div class="detail">
+            <input type="id" placeholder="Uid" class="placeholder" name="Uid" #id>
         </div>
         <div class="detail">
-            <input type="number" placeholder="Age" class="placeholder" name="age" #age>
-        </div>-->
-        <div class="detail">
-            <input type="email" placeholder="Email" class="placeholder" name="email" #email>
+            <input type="text" placeholder="Name" class="placeholder" name="Name" #name>
         </div>
         <div class="detail">
-            <input type="password" placeholder="password" class="placeholder" name="password" #password>
+            <input type="number" placeholder="Age" class="placeholder" name="Age" #age>
+        </div>
+        <div class="detail">
+            <input type="text" placeholder="Phone No." class="placeholder" name="phone" #phoneno>
+        </div>
+        <div class="detail">
+            <input type="text" placeholder="Disease" class="placeholder" name="Disease" #ailments>
         </div>
         <button type="submit" 
-        (click)="patientservice.registerpatient(email.value, password.value)"
+        (click)="patientservice.get_updated_patient(id.value, name.value, age.valueAsNumber, phoneno.value, ailments.value)"
         class="submit-button">Save</button>
     </div>
 </div>
