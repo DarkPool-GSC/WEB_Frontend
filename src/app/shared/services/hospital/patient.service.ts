@@ -12,7 +12,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 export class PatientService {
 
   constructor(
-    private firestore:Firestore,
+    private firestore:Firestore,                                    
     private router:Router,
     private ngzone:NgZone,
     private firebase : Auth
@@ -21,16 +21,21 @@ export class PatientService {
   async registerpatient(e_mail:string,pass_word:string){
      return signInWithEmailAndPassword(this.firebase,e_mail,pass_word).then((result) => {
       this.setPatient(result.user)
+<<<<<<< HEAD
       window.alert(`Account created succesfully!!, your patient ID is ${result.user.uid}`)
+=======
+>>>>>>> 0f8cc3c5375051586d6a8d54ea814b35d1b9b726
      }).catch((error) =>{
       console.log(error)
      })
   }
-  setPatient(patient:any){
+  
+  setPatient(patient : any){
        
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
+<<<<<<< HEAD
                uid:patient.uid,
                email:patient.email,
                display_name:patient.displayname,
@@ -42,6 +47,23 @@ export class PatientService {
                Medication_Dose:patient.Medication_Dose,
                image_fieldurl:patient.photoURL,
                email_verified:patient.emailVerified
+=======
+               uid:patient.id||null,
+               email:patient.email,
+               display_name:patient.display_name||null,
+               Age:patient.Age||null,
+               Weight:patient.Weight||null,
+               Phone_No:patient.Phone_No||null,
+               Ailments:patient.Ailments||null,
+               Last_Visit:patient.Last_Visit||null,
+               Pulse:patient.Pulse||null,
+               Blood_Pressure:patient.Blood_Pressure||null,
+               Notes:patient.Notes||null,
+               Medication_name:patient.Medication_name||null,
+               Medication_Dose:patient.Medication_Dose||null,
+               image_fieldurl:patient.Image||null,
+               email_verified:patient.emailVerified||null
+>>>>>>> 0f8cc3c5375051586d6a8d54ea814b35d1b9b726
             }
             return setDoc(patientRef,patientData,{
                 merge:true,

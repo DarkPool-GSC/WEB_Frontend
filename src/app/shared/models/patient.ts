@@ -8,6 +8,7 @@ export interface Patient {
     Notes:string[];
     Medication_name:string;
     Medication_Dose:number;
-    email:string,
-    email_verified:boolean
+    email:string;
+    email_verified:boolean;
+
 }
