@@ -32,19 +32,6 @@ export class PatientService {
     const patientRef = doc(this.firestore,`patients/${patient.uid}`);
 
     const patientData: Patient = {
-<<<<<<< HEAD
-               uid:patient.uid,
-               email:patient.email,
-               display_name:patient.displayname,
-               Age:patient.Age,
-               Phone_No:patient.Phone_No,
-               Ailments:patient.Ailments,
-               Notes:patient.Notes,
-               Medication_name:patient.Medication_name,
-               Medication_Dose:patient.Medication_Dose,
-               image_fieldurl:patient.photoURL,
-               email_verified:patient.emailVerified
-=======
                uid:patient.id||null,
                email:patient.email,
                display_name:patient.display_name||null,
