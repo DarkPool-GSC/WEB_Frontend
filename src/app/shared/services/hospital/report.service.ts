@@ -1,35 +1,56 @@
 import { Injectable } from '@angular/core';
-import { Firestore, doc, setDoc,getDoc, deleteDoc, collection, getDocs } from '@angular/fire/firestore';
-import { addDoc } from 'firebase/firestore';
+import { Firestore, doc, setDoc, getDoc, deleteDoc, collection, getDocs } from '@angular/fire/firestore';
+import { addDoc, updateDoc } from 'firebase/firestore';
 import { Patient } from '../../models/patient';
-import { Medicines, Report } from '../../models/report';
+import { Report } from '../../models/report';
 @Injectable({
   providedIn: 'root'
 })
 export class ReportService {
-  report= {};
-  constructor(private firestore : Firestore) {
-    this.report = {}
-   }
-  genrateReport(instructions : string,patient : any){
-    const reportCollection = collection(this.firestore, `patient/${patient.id}/report`);
-    const report : Report = {
-      patientId : patient.id,
-      instructions : instructions,
-    }
-    return addDoc(reportCollection, report);
+  constructor(private firestore: Firestore) {
+  }
 
+  setUpreport(id: string, instructions: string) {
+    const docref = doc(this.firestore, `reports/${id}}`)
+    const reportdata: Report = {
+      patientId: id,
+      instructions: instructions || "",
+    }
   }
-  async getReportForAPatient(patientID : string){
-    const reportCollectionRef = collection(this.firestore, `patient/${patientID}/report`);
-    const querySnapshot = await getDocs(reportCollectionRef);
-    this.report = querySnapshot;
+
+  async getReport(id: string) {
+    const docref = doc(this.firestore, 'reports', id)
+    const docsnap = await getDoc(docref)
+    if (docsnap.exists()) {
+      console.log('Patient data succesfully fetched', docsnap.data())
+    } else {
+      console.log('No such data found')
+    }
   }
-  
-  async Addmedicines(id:string,medicine:Medicines[]){
-    const colref = collection(this.firestore,'id/report')
-    const docref = doc(this.firestore,`id/report/${medicine}`)
-    
+
+  async fetch_updated_report(id: string, instructions: string) {
+    const r: any = {
+      patientID: id,
+      instructions: instructions || "",
+    }
+    this.updatereport(id, r)
+  }
+  async updatereport(id: string, report: any) {
+    const docref = doc(this.firestore, 'reports', id)
+    await updateDoc(docref, report).then(() => {
+      console.log('Report updated succesfully')
+    }).catch(error => {
+      console.log(error)
+    })
+  }
+
+  async deletereport(id: string) {
+    const docref = doc(this.firestore, 'reports', id)
+    await deleteDoc(docref).then(() => {
+      console.log('Patient deleted succesfully')
+    }).catch(error => {
+      console.log(error)
+    })
   }
 
 }

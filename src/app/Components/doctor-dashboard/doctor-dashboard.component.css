@@ -1,26 +1,30 @@
-.doctor-profile-pic{
+.doctor-profile-pic {
     height: 50px;
     width: 50px;
     border-radius: 100%;
 }
-.doctor-dashboard{
+
+.doctor-dashboard {
     min-height: 100vh;
     background-color: rgb(212, 212, 212);
 }
-.doctor-first-row{
+
+.doctor-first-row {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
     width: 100%;
 
 }
-.doctor-second-row{
+
+.doctor-second-row {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-.patient-personal-details{
+
+.patient-personal-details {
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -28,13 +32,15 @@
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.second-row-notes-div{
+
+.second-row-notes-div {
     /* padding-right: 1rem; */
     margin: 0 1rem;
     width: 50%;
 
 }
-.medicine-patient-info{
+
+.medicine-patient-info {
     background-color: white;
     border-radius: 1rem;
     display: flex;
@@ -42,6 +48,7 @@
     /* width: 50%; */
     padding: 1rem 0rem;
 }
+
 .notes-patient-info {
     background-color: white;
     border-radius: 1rem;
@@ -51,27 +58,31 @@
     /* margin-right: 1rem; */
     padding: 1rem 0rem;
 }
-.personal-patient-info{
+
+.personal-patient-info {
     background-color: white;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     width: 50%;
     padding: 1rem 0rem;
-    
+
 }
-.patient-info-div{
+
+.patient-info-div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
     width: 100%;
 }
-.info-row-header{
+
+.info-row-header {
     font-size: 1.25rem;
     font-weight: 500;
 }
-.lasvisit-patient-info{
+
+.lasvisit-patient-info {
     background-color: white;
     border-radius: 1rem;
     display: flex;
@@ -80,12 +91,14 @@
     padding: 1rem 0rem;
     margin-left: 1rem;
 }
-.medicine-title{
+
+.medicine-title {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.medicine-header{
+
+.medicine-header {
     color: #20B5B5;
     font-size: 2rem;
     margin: 0;
@@ -94,15 +107,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    border-bottom : rgb(192, 192, 192) 2px solid;
+
+    border-bottom: rgb(192, 192, 192) 2px solid;
 }
-.medicine-title-text{
+
+.medicine-title-text {
     margin: 0;
     margin-right: 1rem;
 
 }
-.title-name{
+
+.title-name {
     color: #20B5B5;
     font-size: 2rem;
     margin: 0;
@@ -110,10 +125,11 @@
     font-weight: 500;
     display: flex;
     justify-content: center;
-    
-    border-bottom : rgb(192, 192, 192) 2px solid;
+
+    border-bottom: rgb(192, 192, 192) 2px solid;
 }
-.info-row{
+
+.info-row {
     padding: 0rem 1rem;
     display: flex;
     flex-direction: row;
@@ -121,7 +137,8 @@
     /* width: 100%; */
     margin-top: 0.8rem;
 }
-.last-visit{
+
+.last-visit {
     font-size: 4rem;
     font-weight: 500;
     display: flex;
@@ -129,11 +146,13 @@
     align-items: center;
     height: 100%;
 }
-.aligned-info{
+
+.aligned-info {
     display: flex;
     flex-direction: column;
 }
-.doctor-header{
+
+.doctor-header {
     display: flex;
     align-items: center;
     font-size: 1.6rem;
@@ -143,65 +162,79 @@
     font-weight: 700;
     background-color: white;
 }
-.doctor-header p{
+
+.doctor-header p {
     padding: 0;
     margin: 0;
 }
-.dashboard-medicine-div{
+
+.dashboard-medicine-div {
     padding: 1rem 1rem;
 }
-.medicine-info{
+
+.medicine-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 0.4rem;
 }
-.medicine-info-header{
+
+.medicine-info-header {
     font-weight: 500;
     font-size: 1.25rem;
 }
-.medicine-div-header-sidepanel{
+
+.medicine-div-header-sidepanel {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-items: center;
 }
-.medicine-div-header-sidepanel svg{
+
+.medicine-div-header-sidepanel svg {
     height: 32px;
     width: 32px;
 }
-.medicine-add-button{
+
+.medicine-add-button {
     margin-right: 1rem;
 }
-@media screen and (max-width:  800px){
-   .doctor-first-row{
-    flex-direction: column;
+
+@media screen and (max-width: 800px) {
+    .doctor-first-row {
+        flex-direction: column;
     }
-    .patient-personal-details{
+
+    .patient-personal-details {
         width: auto;
-        padding : 0 1rem;
+        padding: 0 1rem;
         margin-left: 0;
         margin-right: 0;
         /* padding: 0 1rem; */
     }
-    .doctor-second-row{
+
+    .doctor-second-row {
         flex-direction: column;
         margin-top: 0;
     }
-    .second-row-notes-div{
+
+    .second-row-notes-div {
         width: auto;
         margin-bottom: 1rem;
     }
 }
-@media screen and (max-width :  500px){
-    .patient-personal-details{
+
+@media screen and (max-width : 500px) {
+    .patient-personal-details {
         flex-direction: column;
     }
-    .personal-patient-info{
+
+    .personal-patient-info {
         width: auto;
         margin-bottom: 1rem;
     }
-    .lasvisit-patient-info{
+
+    .lasvisit-patient-info {
         width: auto;
         margin-left: 0;
     }

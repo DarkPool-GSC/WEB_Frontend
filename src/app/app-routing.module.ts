@@ -10,17 +10,17 @@ import { VerifyEmailComponent } from './Components/verify-email/verify-email.com
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 const routes: Routes = [
   {
-    path:'about', component: AboutComponent
+    path: 'about', component: AboutComponent
   },
   {
-    path : 'team', component : TeamComponent
+    path: 'team', component: TeamComponent
   },
-  {path: 'login', component : LoginComponent},
-  {path: 'register', component : RegisterComponent},
-  {path: 'verify-email', component : VerifyEmailComponent},
-  {path: 'forgot-password', component : ForgetPasswordComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'verify-email', component: VerifyEmailComponent },
+  { path: 'forgot-password', component: ForgetPasswordComponent },
   {
-    path : 'dashboard', component : DoctorDashboardComponent
+    path: 'dashboard', component: DoctorDashboardComponent
   },
 
 ];
