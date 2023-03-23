@@ -6,5 +6,5 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  constructor(public PatientService :PatientService){}
+  constructor(public PatientService: PatientService) { }
 }

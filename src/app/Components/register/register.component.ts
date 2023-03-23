@@ -6,5 +6,5 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  constructor(public authService :AuthService){}
+  constructor(public authService: AuthService) { }
 }

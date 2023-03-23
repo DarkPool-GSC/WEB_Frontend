@@ -6,5 +6,5 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./verify-email.component.css']
 })
 export class VerifyEmailComponent {
-  constructor(public authService : AuthService) {}
+  constructor(public authService: AuthService) { }
 }
