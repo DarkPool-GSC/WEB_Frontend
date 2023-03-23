@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from './Components/about/about.component';
+import { AboutComponent } from './Components/home/home.component';
 import { TeamComponent } from './Components/team/team.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -10,7 +10,7 @@ import { VerifyEmailComponent } from './Components/verify-email/verify-email.com
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 const routes: Routes = [
   {
-    path:'about', component: AboutComponent
+    path:'home', component: AboutComponent
   },
   {
     path : 'team', component : TeamComponent

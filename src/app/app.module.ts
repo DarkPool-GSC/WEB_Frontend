@@ -8,7 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AppComponent } from './app.component';
 import { DoctorDashboardComponent } from './Components/doctor-dashboard/doctor-dashboard.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { AboutComponent } from './Components/about/about.component';
+import { AboutComponent } from './Components/home/home.component';
 import { TeamComponent } from './Components/team/team.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -22,7 +22,6 @@ import { ForgetPasswordComponent } from './Components/forget-password/forget-pas
 import { SearchComponent } from './Components/search/search.component';
 import { PatientFormComponent } from './Components/patient-form/patient-form.component';
 import { PatientDetailsComponent } from './Components/patient-details/patient-details.component';
-import { ParentComponent } from './Components/parent/parent.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -39,7 +38,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchComponent,
     PatientFormComponent,
     PatientDetailsComponent,
-    ParentComponent,
   ],
   imports: [
     BrowserModule,
