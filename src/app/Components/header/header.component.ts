@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   dropDownState = true;
-  constructor(){
+  constructor() {
 
   }
-  openNavDropdown(){
+  openNavDropdown() {
     console.log("clicked");
     this.dropDownState = !this.dropDownState;
   }

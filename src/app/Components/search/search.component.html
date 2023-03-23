@@ -4,46 +4,44 @@
 
 <div class="search">
     <input type="uid" placeholder="Enter patient id" id="uid" name="uid" #uid>
-    <button type="submit" 
-        (click)="PatientService.GetPatient(uid.value)"
-        class="search-button">Search</button>
+    <button type="submit" (click)="PatientService.GetPatient(uid.value)" class="search-button">Search</button>
 </div>
 
 <div class="display">
-<ul class="list-patients">
-    <ul class="rows">
-        <li>
-            Patient Name
-        </li>
-        <li>
-            Id
-        </li>
-        <li>
-            Date
-        </li>
-        <li>
-            Gender
-        </li>
-        <li>
-            Status
-        </li>
+    <ul class="list-patients">
+        <ul class="rows">
+            <li>
+                Patient Name
+            </li>
+            <li>
+                Id
+            </li>
+            <li>
+                Date
+            </li>
+            <li>
+                Gender
+            </li>
+            <li>
+                Status
+            </li>
+        </ul>
+        <ul class="rows">
+            <li>
+                Adhishraya Sharma
+            </li>
+            <li>
+                23456
+            </li>
+            <li>
+                Jun 21, 2023
+            </li>
+            <li>
+                Male
+            </li>
+            <li>
+                In-Treatment
+            </li>
+        </ul>
     </ul>
-    <ul class="rows">
-        <li>
-            Adhishraya Sharma
-        </li>
-        <li>
-            23456
-        </li>
-        <li>
-            Jun 21, 2023
-        </li>
-        <li>
-            Male
-        </li>
-        <li>
-            In-Treatment
-        </li>
-    </ul>
-</ul>
 </div>

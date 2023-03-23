@@ -8,5 +8,5 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
   styleUrls: ['./patient-form.component.css']
 })
 export class PatientFormComponent {
-  constructor(public patientservice :PatientService){}
+  constructor(public patientservice: PatientService) { }
 }

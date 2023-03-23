@@ -6,5 +6,5 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(public authService: AuthService){}
+  constructor(public authService: AuthService) { }
 }
