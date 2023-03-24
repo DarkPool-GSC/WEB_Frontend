@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gsc-23-fbfc1": {
+      "hosting": {
+        "doctor-frontend": [
+          "gsc-23-fbfc1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gsc-23-fbfc1"
+  }
+}
