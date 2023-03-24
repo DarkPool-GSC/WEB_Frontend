@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from './Components/home/home.component';
+import { HomeComponent } from './Components/home/home.component';
 import { TeamComponent } from './Components/team/team.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { DoctorDashboardComponent } from './Components/doctor-dashboard/doctor-dashboard.component';
 import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { ReceptionistDashboardComponent } from './Components/receptionist-dashboard/receptionist-dashboard.component';
 const routes: Routes = [
   {
-    path: 'about', component: AboutComponent
+    path: '', component: HomeComponent
   },
   {
     path: 'team', component: TeamComponent
@@ -22,6 +23,7 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DoctorDashboardComponent
   },
+  { path : 'reception-dashboard', component: ReceptionistDashboardComponent}
 
 ];
 

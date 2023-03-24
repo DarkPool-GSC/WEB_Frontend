@@ -1,5 +1,4 @@
 body {
-    font-family: tahoma;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -8,6 +7,7 @@ body {
     align-items: center;
     padding: 5rem;
   }
+
 
 .container {
     padding-left: 3rem;
@@ -85,43 +85,21 @@ body {
     transform: scale(0.7);
   }
   
+  .our-team .name {
+    display: block;
+    font-size: 1.2rem;
+    font-family: poppins;
+    color: #1b9b9b;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  
+
   .our-team .title {
     display: block;
-    font-size: 15px;
-    color: #4e5052;
+    font-size: 1.2rem;
+    font-family: poppins;
+    color: #1b9b9b;
     text-transform: capitalize;
-  }
-  
-  .our-team .social {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #20B5B5;
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    transition: all 0.5s ease 0s;
-  }
-  
-  .our-team:hover .social {
-    bottom: 0;
-  }
-  
-  .our-team .social li {
-    display: inline-block;
-  }
-  
-  .our-team .social li a {
-    display: block;
-    padding: 10px;
-    font-size: 17px;
-    color: white;
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-  }
-  
-  .our-team .social li a:hover {
-    color: #20B5B5;
-    background-color: #f7f5ec;
   }
   
