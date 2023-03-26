@@ -4,10 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Components/home/home.component';
 import { TeamComponent } from './Components/team/team.component';
 import { LoginComponent } from './Components/login/login.component';
-import { RegisterComponent } from './Components/register/register.component';
+import { RegisterComponent } from './Components/login/register/register.component';
 import { DoctorDashboardComponent } from './Components/doctor-dashboard/doctor-dashboard.component';
-import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
-import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { VerifyEmailComponent } from './Components/login/verify-email/verify-email.component';
+import { ForgetPasswordComponent } from './Components/login/forget-password/forget-password.component';
 import { ReceptionistDashboardComponent } from './Components/receptionist-dashboard/receptionist-dashboard.component';
 const routes: Routes = [
   {
