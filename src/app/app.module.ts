@@ -24,6 +24,9 @@ import { PatientFormComponent } from './Components/patient-form/patient-form.com
 import { PatientDetailsComponent } from './Components/patient-details/patient-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReceptionistDashboardComponent } from './Components/receptionist-dashboard/receptionist-dashboard.component';
+import { TopWidgetsComponent } from './Components/top-widgets/top-widgets.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ListComponent } from './Components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,8 @@ import { ReceptionistDashboardComponent } from './Components/receptionist-dashbo
     PatientFormComponent,
     PatientDetailsComponent,
     ReceptionistDashboardComponent,
+    TopWidgetsComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { ReceptionistDashboardComponent } from './Components/receptionist-dashbo
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
