@@ -16,6 +16,9 @@ export class ReportService {
       patientId: id,
       instructions: instructions || "",
     }
+    return setDoc(docref,reportdata,{
+      merge:true
+    })
   }
 
   async getReport(id: string) {
