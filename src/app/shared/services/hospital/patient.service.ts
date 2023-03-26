@@ -96,4 +96,14 @@ export class PatientService {
     })
   }
 
+  async get_number_of_patients(){
+    var i = 0;
+    const colref = collection(this.firestore, 'patients')
+    const docsnap = await getDocs(colref)
+    docsnap.forEach(doc => {
+      i++;
+    })
+    return i
+  }
+
 }
