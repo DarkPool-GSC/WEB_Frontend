@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/compat';
 import { AuthService } from '../auth.service';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { count } from 'rxjs';
+import { collectionGroup, getCountFromServer, getFirestore } from 'firebase/firestore';
 @Injectable({
   providedIn: 'root'
 })
@@ -60,12 +62,12 @@ export class PatientService {
     })
   }
 
-  async get_updated_patient(id: string, name: string, age: number, phoneno: string, ailments: string) {
+  async get_updated_patient(id: string, name?: string, age?: number, phoneno?: string, ailments?: string) {
     const P: any = {
-      display_name: name || null,
-      Age: age || null,
-      Phone_no: phoneno || null,
-      Ailments: ailments || null,
+      display_name: name,
+      Age: age,
+      Phone_no: phoneno,
+      Ailments: ailments,
     }
     this.UpdatePatient(id, P)
   }
@@ -95,5 +97,14 @@ export class PatientService {
       console.log(doc.data())
     })
   }
+
+  async get_number_of_patients() {
+    const db = getFirestore()
+    const colref = collectionGroup(db, 'patients')
+    const docsnap = await getCountFromServer(colref)
+    return docsnap.data().count
+
+  }
+
 
 }
