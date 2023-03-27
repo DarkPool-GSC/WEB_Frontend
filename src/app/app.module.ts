@@ -16,17 +16,17 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { LoginComponent } from './Components/login/login.component';
-import { RegisterComponent } from './Components/register/register.component';
-import { VerifyEmailComponent } from './Components/verify-email/verify-email.component';
-import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
-import { SearchComponent } from './Components/search/search.component';
+import { RegisterComponent } from './Components/login/register/register.component';
+import { VerifyEmailComponent } from './Components/login/verify-email/verify-email.component';
+import { ForgetPasswordComponent } from './Components/login/forget-password/forget-password.component';
 import { PatientFormComponent } from './Components/patient-form/patient-form.component';
 import { PatientDetailsComponent } from './Components/patient-details/patient-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReceptionistDashboardComponent } from './Components/receptionist-dashboard/receptionist-dashboard.component';
-import { TopWidgetsComponent } from './Components/top-widgets/top-widgets.component';
+import { TopWidgetsComponent } from './Components/receptionist-dashboard/top-widgets/top-widgets.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ListComponent } from './Components/list/list.component';
+import { ListComponent } from './Components/receptionist-dashboard/list/list.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +39,6 @@ import { ListComponent } from './Components/list/list.component';
     RegisterComponent,
     VerifyEmailComponent,
     ForgetPasswordComponent,
-    SearchComponent,
     PatientFormComponent,
     PatientDetailsComponent,
     ReceptionistDashboardComponent,

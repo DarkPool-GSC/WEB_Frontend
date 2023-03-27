@@ -1,6 +1,6 @@
 
 <div class="widget-container">
-    <div class="widget green">
+    <div class="widget">
         <div class="icon">
             <fa-icon [icon]="faStethoscope"></fa-icon>
         </div>
@@ -9,16 +9,23 @@
         <div class="bottom">Doctors</div>
       </div>
     </div>
-    <div class="widget yellow">
+    <div class="widget">
         <div class="icon">
             <fa-icon [icon]="faHeart"></fa-icon>
         </div>
       <div class="value">
-        <div class="top">{{patientCount}}</div>
+        <div class="top">200</div>
         <div class="bottom"> Patients </div>
       </div>
     </div>
+    <div class="button-container">
+    <div class="button" (click)="toggleModal(true)">
+      Add Patient
+    </div>
+   
+    </div>
+    <div [ngClass]="{'modalVisible' : modalState, 'modalInvisible' : !modalState}">
 
-    <script>
-      console.log("here",patientCount)
-      </script>
+      <app-patient-form></app-patient-form>
+    </div>
+</div>

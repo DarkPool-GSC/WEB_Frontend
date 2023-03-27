@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopWidgetsComponent } from '../top-widgets/top-widgets.component';
+import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
 
 @Component({
   selector: 'app-receptionist-dashboard',

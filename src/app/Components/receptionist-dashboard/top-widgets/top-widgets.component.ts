@@ -12,12 +12,9 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
 export class TopWidgetsComponent {
   faStethoscope = faStethoscope
   faHeart = faHeart
-  patientCount = 0;
-  constructor(public patientservice: PatientService) {
-    this.setPatientNumber();
+  modalState = false;
+  constructor(public patientservice: PatientService) { }
+  toggleModal(value : boolean){
+    this.modalState = value;
   }
-  async setPatientNumber(){
-    this.patientCount = await this.patientservice.get_count();
-  }
-  
 }
