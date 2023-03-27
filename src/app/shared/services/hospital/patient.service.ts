@@ -8,18 +8,24 @@ import { AuthService } from '../auth.service';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { count } from 'rxjs';
 import { collectionGroup, getCountFromServer, getFirestore } from 'firebase/firestore';
+
 @Injectable({
   providedIn: 'root'
 })
-export class PatientService {
 
+export class PatientService {
+  patientCount = 0;
+  
   constructor(
     private firestore: Firestore,
     private router: Router,
     private ngzone: NgZone,
     private firebase: Auth
 
-  ) { }
+  ) {
+    this.patientCount = 0;
+   }
+
   async registerpatient(e_mail: string, pass_word: string) {
     return signInWithEmailAndPassword(this.firebase, e_mail, pass_word).then((result) => {
       this.setPatient(result.user)
@@ -97,14 +103,11 @@ export class PatientService {
       console.log(doc.data())
     })
   }
-
-  async get_number_of_patients() {
-    const db = getFirestore()
-    const colref = collectionGroup(db, 'patients')
-    const docsnap = await getCountFromServer(colref)
-    return docsnap.data().count
-
+  
+  async get_count(){
+    const colref = collection(this.firestore, 'patients');
+    this.patientCount =  await (await getCountFromServer(colref)).data().count;
+    console.log(this.patientCount);
+    return this.patientCount;
   }
-
-
 }
