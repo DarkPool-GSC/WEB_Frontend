@@ -1,19 +1,23 @@
 .login-bg {
-    background-color: #e3d9e8;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 2rem;
 }
 
-.login-logo {
-    height: 2rem;
-    width: 2rem;
-    fill: rgba(92, 92, 92, 0.37)
+.background {
+    background-color: #adf0f0;
+    height: 93%;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #20B5B5;
+    margin-bottom: 1.5rem;
 }
 
 .login-from {
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: #DCFFFF;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -32,9 +36,11 @@
 }
 
 .no-account-header {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     font-size: 0.8rem;
     align-items: flex-end;
     color: #4f85e2;
@@ -51,12 +57,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #4f85e2;
+    background-color: #20B5B5;
     border-radius: 0.5rem;
     padding: 10px 20px;
     color: white;
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 1rem;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
@@ -133,12 +139,19 @@
 
 .submit-button {
     border: none;
-    background-color: #262528;
+    background-color: #20B5B5;
     color: white;
     padding: 0.5rem 2rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width : 800px) {
