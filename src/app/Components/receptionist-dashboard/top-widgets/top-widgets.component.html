@@ -28,4 +28,14 @@
 
       <app-patient-form></app-patient-form>
     </div>
+    <div class="button-container">
+      <div class="button" (click)="toggleModal(true)">
+        Add Details
+      </div>
+     
+      </div>
+      <div [ngClass]="{'modalVisible' : modalState, 'modalInvisible' : !modalState}">
+  
+        <app-patient-details></app-patient-details>
+      </div>
 </div>
