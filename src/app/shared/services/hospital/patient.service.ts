@@ -102,8 +102,9 @@ export class PatientService {
     const colref = collection(this.firestore, 'patients')
     const docsnap = await getDocs(colref)
     docsnap.forEach(doc => {
-      console.log(doc.data())
-      this.arr.push(doc.data())
+      var dat = doc.data()
+      console.log(dat)
+      this.arr.push(dat)
     })
     return this.arr
   }
