@@ -12,5 +12,9 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
 export class TopWidgetsComponent {
   faStethoscope = faStethoscope
   faHeart = faHeart
+  modalState = false;
   constructor(public patientservice: PatientService) { }
+  toggleModal(value : boolean){
+    this.modalState = value;
+  }
 }

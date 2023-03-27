@@ -65,3 +65,18 @@
     background-color: #DCFFFF;
     cursor: pointer;
 }
+.modalInvisible{
+    display: none;
+}
+.modalVisible{
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.2);
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    
+}
