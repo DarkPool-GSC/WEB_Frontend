@@ -26,6 +26,6 @@
     </div>
     <div [ngClass]="{'modalVisible' : modalState, 'modalInvisible' : !modalState}">
 
-      <app-patient-form></app-patient-form>
+      <app-patient-form (onAddPaitentClose)="onAddPaitentClose($event)" ></app-patient-form>
     </div>
 </div>

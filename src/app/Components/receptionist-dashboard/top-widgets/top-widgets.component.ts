@@ -17,4 +17,7 @@ export class TopWidgetsComponent {
   toggleModal(value : boolean){
     this.modalState = value;
   }
+  onAddPaitentClose(arg : any){
+    this.modalState = false;
+  }
 }
