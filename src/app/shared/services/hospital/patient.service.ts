@@ -15,7 +15,6 @@ import { collectionGroup, getCountFromServer, getFirestore } from 'firebase/fire
 
 export class PatientService {
   patientCount = 0;
-  
   constructor(
     private firestore: Firestore,
     private router: Router,
@@ -24,6 +23,7 @@ export class PatientService {
 
   ) {
     this.patientCount = 0;
+
    }
 
   async registerpatient(e_mail: string, pass_word: string) {

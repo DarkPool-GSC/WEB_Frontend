@@ -13,8 +13,14 @@ export class TopWidgetsComponent {
   faStethoscope = faStethoscope
   faHeart = faHeart
   modalState = false;
-  constructor(public patientservice: PatientService) { }
+  patientCount = 0;
+  constructor(public patientservice: PatientService) {
+    this.updatePatientCount();
+   }
   toggleModal(value : boolean){
     this.modalState = value;
+  }
+  async updatePatientCount (){
+    this.patientCount = await this.patientservice.get_count();
   }
 }
