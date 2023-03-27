@@ -12,5 +12,12 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
 export class TopWidgetsComponent {
   faStethoscope = faStethoscope
   faHeart = faHeart
-  constructor(public patientservice: PatientService) { }
+  patientCount = 0;
+  constructor(public patientservice: PatientService) {
+    this.setPatientNumber();
+  }
+  async setPatientNumber(){
+    this.patientCount = await this.patientservice.get_count();
+  }
+  
 }
