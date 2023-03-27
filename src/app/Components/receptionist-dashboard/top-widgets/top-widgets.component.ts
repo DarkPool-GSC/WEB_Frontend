@@ -12,16 +12,25 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
 export class TopWidgetsComponent {
   faStethoscope = faStethoscope
   faHeart = faHeart
-  modalState = false;
+  modalState1 = false;
+  modalState2 = false;
   patientCount = 0;
   constructor(public patientservice: PatientService) {
     this.updatePatientCount();
    }
-  toggleModal(value : boolean){
-    this.modalState = value;
+  toggleModal1(value : boolean){
+    this.modalState1 = value;
   }
-  onAddPaitentClose(arg : any){
-    this.modalState = false;
+  onAddPatientClose(arg : any){
+    this.modalState1 = false;
+  }
+
+  toggleModal2(value : boolean){
+    this.modalState2 = value;
+  }
+
+  onAddDetailsClose(arg : any){
+    this.modalState2 = false;
   }
   async updatePatientCount (){
     this.patientCount = await this.patientservice.get_count();

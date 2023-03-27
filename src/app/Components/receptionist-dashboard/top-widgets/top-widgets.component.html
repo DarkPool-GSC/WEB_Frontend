@@ -19,23 +19,23 @@
       </div>
     </div>
     <div class="button-container">
-    <div class="button" (click)="toggleModal(true)">
+    <div class="button" (click)="toggleModal1(true)">
       Add Patient
     </div>
    
     </div>
-    <div [ngClass]="{'modalVisible' : modalState, 'modalInvisible' : !modalState}">
+    <div [ngClass]="{'modalVisible' : modalState1, 'modalInvisible' : !modalState1}">
 
-      <app-patient-form (onAddPaitentClose)="onAddPaitentClose($event)" ></app-patient-form>
+      <app-patient-form (onAddPaitentClose)="onAddPatientClose($event)" ></app-patient-form>
     </div>
     <div class="button-container">
-      <div class="button" (click)="toggleModal(true)">
+      <div class="button" (click)="toggleModal2(true)">
         Add Details
       </div>
      
       </div>
-      <div [ngClass]="{'modalVisible' : modalState, 'modalInvisible' : !modalState}">
+      <div [ngClass]="{'modalVisible' : modalState2, 'modalInvisible' : !modalState2}">
   
-        <app-patient-details></app-patient-details>
+        <app-patient-details (onAddDetailsClose)="onAddDetailsClose($event)" ></app-patient-details>
       </div>
 </div>
