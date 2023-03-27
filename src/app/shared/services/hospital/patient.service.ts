@@ -15,6 +15,7 @@ import { collectionGroup, getCountFromServer, getFirestore } from 'firebase/fire
 
 export class PatientService {
   patientCount = 0;
+  arr:any[];
   constructor(
     private firestore: Firestore,
     private router: Router,
@@ -23,6 +24,7 @@ export class PatientService {
 
   ) {
     this.patientCount = 0;
+    this.arr = []
 
    }
 
@@ -101,7 +103,9 @@ export class PatientService {
     const docsnap = await getDocs(colref)
     docsnap.forEach(doc => {
       console.log(doc.data())
+      this.arr.push(doc.data())
     })
+    return this.arr
   }
   
   async get_count(){
