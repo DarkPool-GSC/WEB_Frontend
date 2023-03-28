@@ -10,9 +10,10 @@ import { PatientService } from 'src/app/shared/services/hospital/patient.service
 export class PatientFormComponent {
   @Output() onAddPaitentClose = new EventEmitter();
   constructor(public patientservice: PatientService) { }
-  createPatient(email : string, password : string){
-    this.patientservice.registerpatient(email, password);
+  createPatient(email : string, password : string, name: string){
+    this.patientservice.registerpatient(email, password, name);
     this.onAddPaitentClose.emit();
 
   }
 }
+
