@@ -1,5 +1,7 @@
 .container {
-    width: 20vw;
+    max-width: 460px;
+    width: 70%;
+    /* width: 20vw; */
     height: 50vh;
     background: #20B5B5;
     color: white;
@@ -22,8 +24,15 @@
 ::placeholder {
     color: white;
 }
-
-
+.header-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.header-box span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 .placeholder {
     padding: 0.8rem;
     border-radius: 0.25rem ;

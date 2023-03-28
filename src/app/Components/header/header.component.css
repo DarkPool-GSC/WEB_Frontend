@@ -100,8 +100,8 @@
     }
 
     .nav-dropdown {
-        background-color: rgb(17 24 39);
-        color: white;
+        background-color: #20B5B5;
+        color: #DCFFFF;
         display: flex;
         flex-direction: column;
         padding: 1rem;
@@ -109,6 +109,11 @@
         border-radius: 0.8rem;
         position: absolute;
         left: 0;
+        z-index: 50;
         right: 0;
+    }
+    .nav-dropdown a:hover{
+        color: #20B5B5;
+        background-color: #DCFFFF;
     }
 }

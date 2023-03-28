@@ -101,6 +101,7 @@ export class PatientService {
   async GetAllPatients() {
     const colref = collection(this.firestore, 'patients')
     const docsnap = await getDocs(colref)
+    this.arr =[];
     docsnap.forEach(doc => {
       var dat = doc.data()
       console.log(dat)

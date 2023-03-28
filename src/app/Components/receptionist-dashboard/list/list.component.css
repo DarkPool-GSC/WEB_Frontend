@@ -1,7 +1,11 @@
 .transaction-wrapper {
     height: 500px;
   }
-  
+  .section-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 1rem;
+  }
 .title {
     padding: 20px;
     padding-bottom: 5px;

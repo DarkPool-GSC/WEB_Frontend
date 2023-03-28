@@ -1,8 +1,15 @@
 <div class="signup">
     <div class="container">
-    <div class="sign-up-heading">
-        Add Patient Details
-    </div>
+        <div class="header-box">
+
+            <div class="sign-up-heading">
+                Add Patient Details
+                
+            </div>
+            <span (click) = "this.onAddDetailsClose.emit()">
+                X
+            </span>
+        </div>
         <div class="detail">
             <input type="id" placeholder="Uid" class="placeholder" name="Uid" #id>
         </div>
