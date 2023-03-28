@@ -11,12 +11,14 @@ import { async } from '@firebase/util';
   providedIn: 'root'
 })
 export class PerscriptionService {
-
+  medicine:any
   constructor(
     private firestore: Firestore,
     private router: Router,
     private ngzone: NgZone,
-  ) { }
+  ) { 
+   this.medicine = null
+  }
 
   set_up_perscription(id: string, medicine_name: string, dos: string, frequency: string, remaining: number, required_Duration: number) {
     const docref = doc(this.firestore, `perscription/${id}`);
@@ -42,7 +44,7 @@ export class PerscriptionService {
       requiredDuration: required_Duration,
     }
     await updateDoc(docref, M).then(() => {
-      console.log("Perscription updated succesfully")
+      window.alert("Perscription updated succesfully")
     }).catch(error => {
       console.log(error)
     })
@@ -52,16 +54,18 @@ export class PerscriptionService {
     const docref = doc(this.firestore, 'perscription', id)
     const docsnap = await getDoc(docref)
     if (docsnap.exists()) {
-      console.log("Data fetched succesfully!", docsnap.data())
+      console.log("Data fetched succesfully!",docsnap.data())
+      this.medicine = docsnap.data()
+      return this.medicine
     } else {
-      console.log("No such document")
+      window.alert("No such document")
     }
   }
 
   async delete_medicine(id: string) {
     const docref = doc(this.firestore, 'perscription', id)
     await deleteDoc(docref).then(() => {
-      console.log("Medicine deleted succesfully")
+      window.alert("Medicine deleted succesfully")
     }).catch(error => {
       console.log(error)
     })

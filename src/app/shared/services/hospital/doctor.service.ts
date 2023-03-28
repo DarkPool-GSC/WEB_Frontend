@@ -36,7 +36,7 @@ export class DoctorService {
   async DeleteDoctor(id: string) {
     const doctorref = doc(this.firestore, 'doctors', id)
     await deleteDoc(doctorref).then(() => {
-      console.log('Doctor deleted succesfully')
+      window.alert('Doctor deleted succesfully')
     }).catch(error => {
       console.log(error)
     })
@@ -45,7 +45,7 @@ export class DoctorService {
   async UpdateDoctor(id: string, doctor: any) {
     const doctorref = doc(this.firestore, 'doctors', id)
     await updateDoc(doctorref, doctor).then(() => {
-      console.log('Doctor Updated succesfully')
+      window.alert('Doctor Updated succesfully')
     }).catch(error => {
       console.log(error)
     })
@@ -57,7 +57,7 @@ export class DoctorService {
     if (docsnap.exists()) {
       console.log('Doctor fetched succesfully', docsnap.data())
     } else {
-      console.log('No data found')
+      window.alert('No data found')
     }
   }
 

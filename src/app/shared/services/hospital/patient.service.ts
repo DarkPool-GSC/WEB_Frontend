@@ -15,6 +15,7 @@ import { collectionGroup, getCountFromServer, getFirestore } from 'firebase/fire
 
 export class PatientService {
   patientCount = 0;
+  pat:any;
   arr:any[];
   constructor(
     private firestore: Firestore,
@@ -25,7 +26,7 @@ export class PatientService {
   ) {
     this.patientCount = 0;
     this.arr = []
-
+    this.pat = null
    }
 
   async registerpatient(e_mail: string, pass_word: string, name : string) {
@@ -64,7 +65,7 @@ export class PatientService {
   async deletePatient(id: string) {
     const docref = doc(this.firestore, 'patients', id)
     await deleteDoc(docref).then(() => {
-      console.log('Patient deleted succesfully')
+      window.alert('Patient deleted succesfully')
     }).catch(error => {
       console.log(error)
     })
@@ -93,8 +94,10 @@ export class PatientService {
     const docsnap = await getDoc(docref)
     if (docsnap.exists()) {
       console.log('Patient Data:', docsnap.data())
+      this.pat = docsnap.data()
+      return this.pat
     } else {
-      console.log('No such documents')
+      window.alert('No such documents')
     }
   }
 
