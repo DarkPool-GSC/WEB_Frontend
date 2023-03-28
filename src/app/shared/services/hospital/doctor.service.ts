@@ -5,18 +5,23 @@ import { Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Auth } from '@angular/fire/auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { getCountFromServer } from 'firebase/firestore';
 @Injectable({
   providedIn: 'root'
 })
 export class DoctorService {
-
+  doctorcount = 0;
+  arr:any[];
   constructor(
     private firestore: Firestore,
     private router: Router,
     private ngzone: NgZone,
     private firebase: Auth
 
-  ) { }
+  ) {
+    this.doctorcount = 0;
+    this.arr = []
+   }
   
 
   async registerDoctor(doctor : any) {
@@ -54,7 +59,14 @@ export class DoctorService {
       console.log(error)
     })
   }
+  async get_updated_doctor(id:string,name?:string,spec?:string){
+    const D:any = {
+      Doctor_name:name,
+      Doctor_specialization:spec
+    }
+    this.UpdateDoctor(id,D)
 
+  }
   async UpdateDoctor(id: string, doctor: any) {
     const doctorref = doc(this.firestore, 'doctors', id)
     await updateDoc(doctorref, doctor).then(() => {
@@ -78,8 +90,17 @@ export class DoctorService {
     const colref = collection(this.firestore, 'doctors')
     const docsnap = await getDocs(colref)
     docsnap.forEach(doc => {
-      console.log(doc.data())
+       var dat = doc.data()
+       console.log(dat)
+       this.arr.push(dat)
     })
+    return this.arr
+  }
+  async get_count(){
+    const colref = collection(this.firestore, 'doctors');
+    this.doctorcount =  await (await getCountFromServer(colref)).data().count;
+    console.log(this.doctorcount);
+    return this.doctorcount;
   }
 }
 
