@@ -1,25 +1,13 @@
 <div class="transactions">
   <div class="title">Latest Appoinmemts</div>
   <div class="transaction-wrapper">
-    <div class="transaction" *ngFor="let transaction of transactions">
-      <div class="image">
-        <img [src]="transaction.imgSrc" alt="" />
-      </div>
-      <div class="title">{{ transaction.display_name }}</div>
-      <div class="price">{{ transaction.price }}</div>
-      <div class="shop-location">
-        <div class="location">{{ transaction.location }}</div>
-      </div>
-      <div
-        class="status"
-        [ngClass]="{
-          confirmed: transaction.status === 'confirmed',
-          pending: transaction.status === 'pending',
-          shipped: transaction.status === 'shipped'
-        }"
-      >
-        {{ transaction.status }}
-      </div>
+    <div class="transaction" *ngFor="let dat of arr">
+      <!--<div class="image">
+        <img [src]="transaction.image_fieldurl" alt="" />
+      </div>-->
+      <div class="title">{{ dat.display_name  }}</div>
+      <div class="price">{{ dat.Age }}</div>
+      <div class="shop-location">{{dat.Phone_no}}</div>
+        <div class="location">{{ dat.Ailments }}</div>
     </div>
-  </div>
-</div>
+

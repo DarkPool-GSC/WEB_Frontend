@@ -19,7 +19,7 @@
             <input type="text" placeholder="Disease" class="placeholder" name="Disease" #ailments>
         </div>
         <button type="submit" 
-        (click)="patientservice.get_updated_patient(id.value, name.value, age.valueAsNumber, phoneno.value, ailments.value)"
+        (click)="AddPatientDetails(id.value, name.value, age.valueAsNumber, phoneno.value, ailments.value)"
         class="submit-button">Save</button>
     </div>
 </div>
