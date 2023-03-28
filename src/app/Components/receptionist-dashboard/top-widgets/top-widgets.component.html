@@ -24,6 +24,16 @@
     </div>
    
     </div>
+    <div class="button-container">
+      <div class="button" (click)="openAddPatientModal()">
+        Add Doctor
+      </div>
+     
+      </div>
+      <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
+
+        <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
+      </div>
     <div [ngClass]="{'modalVisible' : modalState1, 'modalInvisible' : !modalState1}">
 
       <app-patient-form (onAddPaitentClose)="onAddPatientClose($event)" ></app-patient-form>
