@@ -1,7 +1,13 @@
 <div class="signup">
     <div class="container">
-        <div class="sign-up-heading">
-            Add New Patient
+        <div class="add-opatient-header">
+
+            <div class="sign-up-heading">
+                Add New Patient
+            </div>
+            <span (click)="onAddPaitentClose.emit()">
+                X
+            </span>
         </div>
         <!--<div class="detail">
             <input type="name" placeholder="Name" class="placeholder" name="name" #name>
@@ -13,9 +19,12 @@
             <input type="email" placeholder="Email" class="placeholder" name="email" #email>
         </div>
         <div class="detail">
+            <input type="name" placeholder="Name" class="placeholder" name="email" #name>
+        </div>
+        <div class="detail">
             <input type="password" placeholder="password" class="placeholder" name="password" #password>
         </div>
-        <button type="submit" (click)="createPatient(email.value, password.value)"
+        <button type="submit" (click)="createPatient(email.value, password.value, name.value)"
             class="submit-button">Save</button>
     </div>
 </div>

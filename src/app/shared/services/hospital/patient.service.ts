@@ -29,23 +29,23 @@ export class PatientService {
     this.pat = null
    }
 
-  async registerpatient(e_mail: string, pass_word: string) {
+  async registerpatient(e_mail: string, pass_word: string, name : string) {
     return signInWithEmailAndPassword(this.firebase, e_mail, pass_word).then((result) => {
-      this.setPatient(result.user)
+      this.setPatient(result.user, name)
       window.alert(`Account created succesfully!!, your patient ID is ${result.user.uid}`)
     }).catch((error) => {
       console.log(error)
     })
   }
 
-  setPatient(patient: any) {
+  setPatient(patient: any, name : string | null ) {
 
     const patientRef = doc(this.firestore, `patients/${patient.uid}`);
 
     const patientData: Patient = {
       uid: patient.id || null,
       email: patient.email,
-      display_name: patient.display_name || null,
+      display_name: patient.display_name || name,
       Age: patient.Age || null,
       Phone_No: patient.Phone_No || null,
       Ailments: patient.Ailments || null,

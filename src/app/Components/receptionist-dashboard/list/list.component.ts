@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from 'src/app/shared/services/hospital/patient.service';
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
