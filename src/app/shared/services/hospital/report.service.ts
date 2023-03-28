@@ -6,8 +6,11 @@ import { Report } from '../../models/report';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ReportService {
+  report:any
   constructor(private firestore: Firestore) {
+    this.report = null
   }
 
   setUpreport(id: string, instructions: string) {
@@ -26,8 +29,10 @@ export class ReportService {
     const docsnap = await getDoc(docref)
     if (docsnap.exists()) {
       console.log('Patient data succesfully fetched', docsnap.data())
+      this.report = docsnap.data()
+      return this.report
     } else {
-      console.log('No such data found')
+      window.alert('No such data found')
     }
   }
 
@@ -41,7 +46,7 @@ export class ReportService {
   async updatereport(id: string, report: any) {
     const docref = doc(this.firestore, 'reports', id)
     await updateDoc(docref, report).then(() => {
-      console.log('Report updated succesfully')
+      window.alert('Report updated succesfully')
     }).catch(error => {
       console.log(error)
     })
@@ -50,7 +55,7 @@ export class ReportService {
   async deletereport(id: string) {
     const docref = doc(this.firestore, 'reports', id)
     await deleteDoc(docref).then(() => {
-      console.log('Patient deleted succesfully')
+      window.alert('Patient deleted succesfully')
     }).catch(error => {
       console.log(error)
     })
