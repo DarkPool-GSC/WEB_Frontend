@@ -14,6 +14,7 @@ export class TopWidgetsComponent {
   faHeart = faHeart
   modalState1 = false;
   modalState2 = false;
+  modalState3 = false;
   patientCount = 0;
   constructor(public patientservice: PatientService) {
     this.updatePatientCount();
@@ -32,6 +33,15 @@ export class TopWidgetsComponent {
   onAddDetailsClose(arg : any){
     this.modalState2 = false;
   }
+
+  toggleModal3(value : boolean){
+    this.modalState3 = value;
+  }
+
+  onAddDoctorClose(arg : any){
+    this.modalState3 = false;
+  }
+
   async updatePatientCount (){
     this.patientCount = await this.patientservice.get_count();
   }

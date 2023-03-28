@@ -38,4 +38,14 @@
   
         <app-patient-details (onAddDetailsClose)="onAddDetailsClose($event)" ></app-patient-details>
       </div>
+      <div class="button-container">
+        <div class="button" (click)="toggleModal3(true)">
+          Add Doctor
+        </div>
+       
+        </div>
+        <div [ngClass]="{'modalVisible' : modalState3, 'modalInvisible' : !modalState3}">
+    
+          <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
+        </div>
 </div>

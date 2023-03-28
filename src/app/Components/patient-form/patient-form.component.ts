@@ -1,5 +1,4 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PatientService } from 'src/app/shared/services/hospital/patient.service';
 
 @Component({

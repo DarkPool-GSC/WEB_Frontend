@@ -26,6 +26,7 @@ import { ReceptionistDashboardComponent } from './Components/receptionist-dashbo
 import { TopWidgetsComponent } from './Components/receptionist-dashboard/top-widgets/top-widgets.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ListComponent } from './Components/receptionist-dashboard/list/list.component';
+import { DoctorFormComponent } from './Components/doctor-form/doctor-form.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ListComponent } from './Components/receptionist-dashboard/list/list.com
     ReceptionistDashboardComponent,
     TopWidgetsComponent,
     ListComponent,
+    DoctorFormComponent,
   ],
   imports: [
     BrowserModule,

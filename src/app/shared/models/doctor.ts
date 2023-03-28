@@ -6,4 +6,5 @@ export interface Doctor {
     Doctor_Qualification: string
     Doctor_Experience: number
     Doctor_specialization: number
+    Doctor_mail:string
 }

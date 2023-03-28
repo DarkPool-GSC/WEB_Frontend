@@ -4,6 +4,7 @@ import { setDoc, getDoc, updateDoc, deleteDoc, doc, collection, getDocs } from '
 import { Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Auth } from '@angular/fire/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -17,16 +18,25 @@ export class DoctorService {
     private firebase: Auth
 
   ) { }
+  async registerdoctor(e_mail: string, pass_word: string,name:string) {
+    return signInWithEmailAndPassword(this.firebase, e_mail, pass_word).then((result) => {
+      this.setDoctor(result.user,name)
+      window.alert(`Account created succesfully!!, your Doctor ID is ${result.user.uid}`)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
 
-  setDoctor(doctor: any) {
+  setDoctor(doctor: any,name:string | null) {
     const doctorref = doc(this.firestore, `doctors/${doctor.uid}`)
     const doctordata: Doctor = {
-      uid: doctor.uid,
-      Doctor_name: doctor.Doctor_name,
-      Doctor_photourl: doctor.Doctor_photourl,
-      Doctor_Qualification: doctor.Doctor_Qualification,
-      Doctor_Experience: doctor.Doctor_Experience,
-      Doctor_specialization: doctor.Doctor_specialization,
+      uid: doctor.uid || null,
+      Doctor_mail:doctor.Doctor_mail || null,
+      Doctor_name: doctor.Doctor_name || name,
+      Doctor_photourl: doctor.Doctor_photourl || null,
+      Doctor_Qualification: doctor.Doctor_Qualification || null, 
+      Doctor_Experience: doctor.Doctor_Experience || null,
+      Doctor_specialization: doctor.Doctor_specialization || null,
     }
     return setDoc(doctorref, doctordata, {
       merge: true,
