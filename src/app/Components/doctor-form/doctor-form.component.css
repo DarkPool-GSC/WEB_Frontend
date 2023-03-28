@@ -35,12 +35,12 @@
     width: 100%;
 }
 
-.add-patient-header{
+.add-opatient-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.add-patient-header span{
+.add-opatient-header span{
     cursor: pointer;
     font-size: 2rem;
 }

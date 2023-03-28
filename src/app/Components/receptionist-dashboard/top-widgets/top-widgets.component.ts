@@ -14,13 +14,19 @@ export class TopWidgetsComponent {
   faHeart = faHeart
   modalState1 = false;
   modalState2 = false;
-  modalState3 = false;
+  addDoctorModalState = false;
   patientCount = 0;
   constructor(public patientservice: PatientService) {
     this.updatePatientCount();
    }
   toggleModal1(value : boolean){
     this.modalState1 = value;
+  }
+  openAddPatientModal(){
+    this.addDoctorModalState = true;
+  }
+  onAddDoctorClose(arg : any){
+    this.addDoctorModalState = false;
   }
   onAddPatientClose(arg : any){
     this.modalState1 = false;
@@ -34,13 +40,6 @@ export class TopWidgetsComponent {
     this.modalState2 = false;
   }
 
-  toggleModal3(value : boolean){
-    this.modalState3 = value;
-  }
-
-  onAddDoctorClose(arg : any){
-    this.modalState3 = false;
-  }
 
   async updatePatientCount (){
     this.patientCount = await this.patientservice.get_count();

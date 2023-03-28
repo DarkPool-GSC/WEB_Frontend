@@ -24,6 +24,16 @@
     </div>
    
     </div>
+    <div class="button-container">
+      <div class="button" (click)="openAddPatientModal()">
+        Add Doctor
+      </div>
+     
+      </div>
+      <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
+
+        <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
+      </div>
     <div [ngClass]="{'modalVisible' : modalState1, 'modalInvisible' : !modalState1}">
 
       <app-patient-form (onAddPaitentClose)="onAddPatientClose($event)" ></app-patient-form>
@@ -39,12 +49,12 @@
         <app-patient-details (onAddDetailsClose)="onAddDetailsClose($event)" ></app-patient-details>
       </div>
       <div class="button-container">
-        <div class="button" (click)="toggleModal3(true)">
+        <div class="button" (click)="onAddDoctorClose(true)">
           Add Doctor
         </div>
        
         </div>
-        <div [ngClass]="{'modalVisible' : modalState3, 'modalInvisible' : !modalState3}">
+        <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
     
           <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
         </div>

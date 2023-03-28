@@ -4,8 +4,7 @@ import { setDoc, getDoc, updateDoc, deleteDoc, doc, collection, getDocs } from '
 import { Firestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Auth } from '@angular/fire/auth';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,17 +17,21 @@ export class DoctorService {
     private firebase: Auth
 
   ) { }
-  async registerdoctor(e_mail: string, pass_word: string,name:string) {
-    return signInWithEmailAndPassword(this.firebase, e_mail, pass_word).then((result) => {
-      this.setDoctor(result.user,name)
-      window.alert(`Account created succesfully!!, your Doctor ID is ${result.user.uid}`)
+  
+
+  async registerDoctor(doctor : any) {
+    return createUserWithEmailAndPassword(this.firebase, doctor.email, doctor.password).then((result) => {
+      this.setDoctor(result.user, doctor)
+      window.alert(`Account created succesfully!!, your patient ID is ${result.user}`)
     }).catch((error) => {
       console.log(error)
+      window.alert(error.message);
     })
   }
 
-  setDoctor(doctor: any,name:string | null) {
-    const doctorref = doc(this.firestore, `doctors/${doctor.uid}`)
+  async setDoctor(user : any, doctor: any) {
+    console.log(user);
+    const doctorref = doc(this.firestore, `doctors/${user.uid}`)
     const doctordata: Doctor = {
       uid: doctor.uid || null,
       Doctor_mail:doctor.Doctor_mail || null,
@@ -38,7 +41,7 @@ export class DoctorService {
       Doctor_Experience: doctor.Doctor_Experience || null,
       Doctor_specialization: doctor.Doctor_specialization || null,
     }
-    return setDoc(doctorref, doctordata, {
+    return await setDoc(doctorref, doctordata, {
       merge: true,
     })
   }
