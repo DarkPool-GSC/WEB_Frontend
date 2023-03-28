@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PatientService } from 'src/app/shared/services/hospital/patient.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -9,7 +9,7 @@ export class ListComponent implements OnInit{
   transactions = [
     {
       id: 1,
-      title: "Adhishraya Sharma",
+      display_name: "Adhishraya Sharma",
       price: "12345",
       shop: "Tech Pro",
       location: "Diabetes",
@@ -18,7 +18,7 @@ export class ListComponent implements OnInit{
     },
     {
       id: 2,
-      title: "Adhishraya Sharma",
+      display_name: "Adhishraya Sharma",
       price: "23456",
       shop: "Pick the best",
       location: "Diabetes",
@@ -27,7 +27,7 @@ export class ListComponent implements OnInit{
     },
     {
       id: 3,
-      title: "Adhishraya Sharma",
+      display_name: "Adhishraya Sharma",
       price: "34567",
       shop: "Quality Leathers",
       location: "Diabetes",
@@ -35,7 +35,14 @@ export class ListComponent implements OnInit{
       imgSrc: "https://spec.nith.ac.in/Team%20Page/assets/team_images/Adhishraya.jpg"
     }
   ];
-  constructor() { }
+  patients = [{}];
+  constructor(public patientservice: PatientService) {
+    this.getAllPatients();
+   }
+   async getAllPatients(){
+    // this.transactions = await this.patientservice.GetAllPatients();
+    console.log(this.patients)
+   }
 
   ngOnInit(): void {
   }

@@ -35,6 +35,16 @@
     width: 100%;
 }
 
+.add-opatient-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.add-opatient-header span{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 button {
     border: none;
     background-color: #DCFFFF;
