@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { PacientPrescriptionFormComponent } from './Components/pacient-prescription-form/pacient-prescription-form.component';
 import { HomeComponent } from './Components/home/home.component';
 import { TeamComponent } from './Components/team/team.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DoctorDashboardComponent
   },
-  { path : 'reception-dashboard', component: ReceptionistDashboardComponent}
+  { path : 'reception-dashboard', component: ReceptionistDashboardComponent},
+  {path : 'patient-prescription', component: PacientPrescriptionFormComponent}
 
 ];
 

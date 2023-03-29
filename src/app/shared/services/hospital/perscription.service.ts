@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/compat';
 import { Firestore } from '@angular/fire/firestore';
-import { Medicines } from '../../models/perscription';
+import { Medicines, Pricription } from '../../models/perscription';
 import { Router } from '@angular/router';
 import { NgZone } from '@angular/core';
-import { setDoc, getDoc, updateDoc, deleteDoc, doc, collection, getDocs } from 'firebase/firestore';
+import { setDoc, getDoc, updateDoc, deleteDoc, doc, collection, getDocs, addDoc } from 'firebase/firestore';
 import { async } from '@firebase/util';
 
 @Injectable({
@@ -19,7 +19,30 @@ export class PerscriptionService {
   ) { 
    this.medicine = null
   }
-
+  async addPrescription(prescription : any, medicines : any){
+    const collectionRef = collection(this.firestore, 'perscription');
+    const presc : Pricription = {
+      patient: prescription.patient,
+      doctor : prescription.doctor,
+      prescription : prescription.prescription
+    }
+    return addDoc(collectionRef, presc).then((result)=>{
+      medicines.map((med : any, index : number)=>{
+        console.log(med, result.id)
+        this.addMedicine(med, result.id.toString())
+      })
+    })
+  }
+  async addMedicine(medicine: any,prec_id : string){
+    console.log(medicine,"this is org", `perscription/${prec_id}/medicines`)
+    const collectionRef = collection(this.firestore, `perscription/${prec_id}/medicines`);
+    const medic = {
+      medicine : medicine.medicine,
+      dosage : medicine.dosage,
+      comment : medicine.comment
+    }
+    return addDoc(collectionRef, medic);
+  }
   set_up_perscription(id: string, medicine_name: string, dos: string, frequency: string, remaining: number, required_Duration: number) {
     const docref = doc(this.firestore, `perscription/${id}`);
     const perscription_data: Medicines = {

@@ -27,6 +27,7 @@ import { TopWidgetsComponent } from './Components/receptionist-dashboard/top-wid
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ListComponent } from './Components/receptionist-dashboard/list/list.component';
 import { DoctorFormComponent } from './Components/doctor-form/doctor-form.component';
+import { PacientPrescriptionFormComponent } from './Components/pacient-prescription-form/pacient-prescription-form.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { DoctorFormComponent } from './Components/doctor-form/doctor-form.compon
     TopWidgetsComponent,
     ListComponent,
     DoctorFormComponent,
+    PacientPrescriptionFormComponent,
   ],
   imports: [
     BrowserModule,

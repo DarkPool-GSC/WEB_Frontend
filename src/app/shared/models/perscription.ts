@@ -5,3 +5,8 @@ export interface Medicines {
     remaining: number,
     requiredDuration: number
 }
+export interface Pricription {
+    patient: string,
+    doctor : string,
+    prescription : string
+}
