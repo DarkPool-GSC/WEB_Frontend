@@ -1,27 +1,33 @@
-# DoctorFrontend
+# REMEDINOW
+![remedinow](https://user-images.githubusercontent.com/96647579/228654089-14572bfa-95cc-4658-b5d3-f1786843a1ea.png) 
+## MAKING YOUR TREATMENTS HASSLE-FREE!
+---
+# Google Developer Student Club Solution Challenge 2023
+> For he who has health, has hope.
+> And he who has hope, has everything.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+A beautiful saying by Owen Arthur, it only highlights the misfortune of living in a world, where not everyone can afford to care for their own wellbeing. It's a tragedy, that only a very priveleged section of our society finds healthcare accessible and affordable. Millions of people around in India suffer deeply due to this glaring flaw in our society, and our project, Remedinow, sets out to mend this.
 
-## Development server
+# But why this project?
+_India has the misfortune of having one of the most inefficient healthcare systems in the world. Apart from the usual factors of unqualified doctors and uneducated patients, our team felt that the major contributor to millions of tragedies every year in healthcare is the mismanagement of patients and their valuable time. Currently, if a patient wants to get checked at one of the hospitals, he has to go through a tedious process of filling out various forms, which can be a task if the patient requires urgent care. Very often, if the hospital has a rush, the patient has to sit through long hours. After going through the redundant form filling, the hospital authorities are often unable to maintain the correct record of a patient, which leads to a miscommunication with the Doctors and causes further frustration to the already aggravated patients. Even if a patient can get the prescription without any hitches, he may be unable to take his medicine at the right time due to his schedule._
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Our project, Remedinow, was created with the sole aim of removing all these hurdles, and making Healthcare available for all.
 
-## Code scaffolding
+___
+### The Video demonstration of the project can be seen here
+___
+# INSTALLATION
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* The app can be installed by directly downloading the APK file located at... on an __Android OS__ powered mobile device. To build the project on your own system, clone the repo___ and open it in __Android Studio__.
+* The website can be accessed at --. To build the website on your own system, clone the repo___,open it in __Visual Studio Code__, and type __"ng serve"__ in the terminal.
+___
+# TECHSTACK :hammer_and_wrench:
+[![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=&lineCount=2&theme=github_dark&line1=FireBase,firebase,606ebd;kotlin,kotlin,5ce845;angular,angular,eac812;&line2=CSS3,CSS3,aff1d3;HTML5,HTML5,61c7bb;Typescript,typescript,b73746;)](https://github-readme-tech-stack.vercel.app/api/cards?title=&lineCount=2&theme=github_dark&line1=FireBase,firebase,606ebd;kotlin,kotlin,5ce845;angular,angular,eac812;&line2=CSS3,CSS3,aff1d3;HTML5,HTML5,61c7bb;Typescript,typescript,b73746;)
+___
+# SUSTAINABLE GOALS TARGETED BY OUR PROJECT 
 
-## Build
+*  ## Good Health and Wellbeing
+*  ## Reduced Inequalities
+*  ## Quality Education
+*  ## Sustainable Development
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
