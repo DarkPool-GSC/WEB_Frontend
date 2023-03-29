@@ -5,8 +5,8 @@
             <fa-icon [icon]="faStethoscope"></fa-icon>
         </div>
       <div class="value">
-        <div class="top">32</div>
-        <div class="bottom">Doctors</div>
+        <div class="top">Doctors</div>
+        <div class="bottom">{{doctorCount}}</div>
       </div>
     </div>
     <div class="widget">
@@ -14,10 +14,11 @@
             <fa-icon [icon]="faHeart"></fa-icon>
         </div>
       <div class="value">
-        <div class="top">{{patientCount}}</div>
-        <div class="bottom"> Patients </div>
+        <div class="top">Patients</div>
+        <div class="bottom"> {{patientCount}} </div>
       </div>
     </div>
+    <div class="buttons-left">
     <div class="button-container">
     <div class="button" (click)="toggleModal1(true)">
       Add Patient
@@ -25,7 +26,18 @@
    
     </div>
     <div class="button-container">
-      <div class="button" (click)="openAddPatientModal()">
+      <div class="button" (click)="toggleModal2(true)">
+        Add Details
+      </div>
+     
+      </div>
+    </div>
+      <div [ngClass]="{'modalVisible' : modalState2, 'modalInvisible' : !modalState2}">
+  
+        <app-patient-details (onAddDetailsClose)="onAddDetailsClose($event)" ></app-patient-details>
+      </div>
+    <!--<div class="button-container ">
+      <div class="button" (click)="openAddDoctorModal(true)">
         Add Doctor
       </div>
      
@@ -33,29 +45,10 @@
       <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
 
         <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
-      </div>
+      </div>-->
     <div [ngClass]="{'modalVisible' : modalState1, 'modalInvisible' : !modalState1}">
 
       <app-patient-form (onAddPaitentClose)="onAddPatientClose($event)" ></app-patient-form>
     </div>
-    <div class="button-container">
-      <div class="button" (click)="toggleModal2(true)">
-        Add Details
-      </div>
-     
-      </div>
-      <div [ngClass]="{'modalVisible' : modalState2, 'modalInvisible' : !modalState2}">
-  
-        <app-patient-details (onAddDetailsClose)="onAddDetailsClose($event)" ></app-patient-details>
-      </div>
-      <div class="button-container">
-        <div class="button" (click)="onAddDoctorClose(true)">
-          Add Doctor
-        </div>
-       
-        </div>
-        <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
-    
-          <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
-        </div>
+
 </div>

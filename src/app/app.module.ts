@@ -28,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ListComponent } from './Components/receptionist-dashboard/list/list.component';
 import { DoctorFormComponent } from './Components/doctor-form/doctor-form.component';
 import { PacientPrescriptionFormComponent } from './Components/pacient-prescription-form/pacient-prescription-form.component';
+import { DoctorWidgetComponent } from './Components/receptionist-dashboard/doctor-widget/doctor-widget.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { PacientPrescriptionFormComponent } from './Components/pacient-prescript
     ListComponent,
     DoctorFormComponent,
     PacientPrescriptionFormComponent,
+    DoctorWidgetComponent,
   ],
   imports: [
     BrowserModule,

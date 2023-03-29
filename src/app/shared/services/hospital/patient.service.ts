@@ -107,7 +107,6 @@ export class PatientService {
     this.arr =[];
     docsnap.forEach(doc => {
       var dat = doc.data()
-      console.log(dat)
       this.arr.push(dat)
     })
     return this.arr

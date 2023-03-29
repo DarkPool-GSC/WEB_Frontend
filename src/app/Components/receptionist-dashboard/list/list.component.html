@@ -1,6 +1,20 @@
 <div class="transactions">
   <div class="section-title">Latest Appoinmemts</div>
   <div class="transaction-wrapper">
+    <div class="transaction-heading">
+      <div class="headings1">
+        Display Name
+      </div>
+      <div class="headings2">
+        Age
+      </div>
+      <div class="headings3">
+        Phone No.
+      </div>
+      <div class="headings4">
+        Ailments
+      </div>
+    </div>
     <div class="transaction" *ngFor="let dat of arr">
       <!--<div class="image">
         <img [src]="transaction.image_fieldurl" alt="" />
@@ -10,4 +24,5 @@
       <div class="shop-location">{{dat.Phone_no}}</div>
         <div class="location">{{ dat.Ailments }}</div>
     </div>
-
+  </div>
+</div> 

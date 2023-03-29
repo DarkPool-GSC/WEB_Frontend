@@ -13,19 +13,21 @@ export class DoctorFormComponent {
     email : "",
     password : "",
     name : "",
+    specialization : "",
     Doctor_Qualification: "",
 
     Doctor_photourl :"",
     Doctor_Experience : "",
-    Doctor_specialization : "",
+
   }
   constructor(public doctorService : DoctorService) {
    
   }
-  createDoctor(email  : string, password : string, name : string){
+  createDoctor(email  : string, password : string, name : string, specialization: string){
     this.doctor.email = email;
     this.doctor.password = password;
     this.doctor.name = name;
+    this.doctor.specialization = specialization;
     this.doctorService.registerDoctor(this.doctor);
   }
 }

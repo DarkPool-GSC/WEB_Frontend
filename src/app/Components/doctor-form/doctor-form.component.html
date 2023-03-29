@@ -19,7 +19,10 @@
         <div class="detail">
             <input type="password" placeholder="password" class="placeholder" name="password" #password>
         </div>
-        <button type="submit" (click)="createDoctor(email.value, password.value, name.value)"
+        <div class="detail">
+            <input type="text" placeholder="Specialization" class="placeholder" name="specialization" #specialization>
+        </div>
+        <button type="submit" (click)="createDoctor(email.value, password.value, name.value, specialization.value)"
             class="submit-button">Save</button>
     </div>
 </div>
