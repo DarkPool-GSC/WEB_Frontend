@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="header">
+    <div class="section-title">Doctors    <div class="icon">
+      <fa-icon [icon]="faUserDoctor"></fa-icon>
+  </div></div>
+    <div class="button-container">
+      <div class="button" (click)="openAddDoctorModal(true)">
+        Add Doctor
+      </div>
+     
+      </div>
+      <div [ngClass]="{'modalVisible' : addDoctorModalState, 'modalInvisible' : !addDoctorModalState}">
+
+        <app-doctor-form (onAddDoctorClose)="onAddDoctorClose($event)" ></app-doctor-form>
+      </div>
+    </div>
+    <div class="transaction-wrapper">
+        <div class="transaction-heading">
+          <div class="headings1">
+            Display Name
+          </div>
+          <div class="headings2">
+            Specialization
+          </div>
+
+        </div>
+        <div class="transaction" *ngFor="let dat of arr">
+          <!--<div class="image">
+            <img [src]="transaction.image_fieldurl" alt="" />
+          </div>-->
+          <div class="title">{{ dat.Doctor_name  }}</div>
+          <div class="price">{{ dat.Doctor_specialization }}</div>
+        </div>
+      </div>
+</div>

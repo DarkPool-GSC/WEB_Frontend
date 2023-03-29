@@ -1,10 +1,18 @@
+
 .transaction-wrapper {
-    height: 500px;
+    width: 42rem;
+    margin-left: 2rem;
+    background-color: #d5f6f6;
+    border-radius: 1rem;
+    /*box-shadow: 0.5px 0.5px 0.5px #939393;*/
   }
   .section-title{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    margin: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-family: Poppins;
   }
 .title {
     padding: 20px;
@@ -17,8 +25,38 @@
   .transaction {
     display: flex;
     align-items: center;
-    padding: 5px 20px;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 5px 5px;
+    border-bottom-width:2px;
+    border-bottom-color:White;
+    border-bottom-style: solid;
+  }
+
+  .transaction-heading {
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border-bottom-width:2px;
+    border-bottom-color:White;
+    border-bottom-style: solid;
+  }
+
+  .headings1 {
+    padding-left: 2.5rem;
+  }
+
+  .headings2 {
+    padding-left: 4rem;
+  }
+
+  .headings3 {
+    padding-left: 5.5rem;
+  }
+
+  .headings4 {
+    padding-left: 6.3rem;
   }
 
   img {
@@ -31,19 +69,32 @@
     padding: 10px;
     font-size: 16px;
     width: 190px;
+    font-family: Poppins;
+    font-weight: 500;
   }
 
   .price {
     padding: 10px;
     font-size: 16px;
     width: 90px;
+    font-family: Poppins;
+    font-weight: 500;
   }
 
   .location {
     margin-top: 2px;
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: bold;
     width: 150px;
     margin-left: 80px;
+    font-family: Poppins;
+    font-weight: 500;
+  }
+
+  .shop-location {
+    padding: 10px;
+    font-size: 16px;
+    width: 90px;
+    font-family: Poppins;
+    font-weight: 500;
   }

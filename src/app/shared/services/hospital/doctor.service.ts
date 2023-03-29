@@ -27,7 +27,7 @@ export class DoctorService {
   async registerDoctor(doctor : any) {
     return createUserWithEmailAndPassword(this.firebase, doctor.email, doctor.password).then((result) => {
       this.setDoctor(result.user, doctor)
-      window.alert(`Account created succesfully!!, your patient ID is ${result.user}`)
+      window.alert(`Account created succesfully!!, your doctor ID is ${result.user.uid}`)
     }).catch((error) => {
       console.log(error)
       window.alert(error.message);
@@ -35,16 +35,16 @@ export class DoctorService {
   }
 
   async setDoctor(user : any, doctor: any) {
-    console.log(user);
     const doctorref = doc(this.firestore, `doctors/${user.uid}`)
     const doctordata: Doctor = {
-      uid: doctor.uid || null,
-      Doctor_mail:doctor.Doctor_mail || null,
-      Doctor_name: doctor.Doctor_name || name,
+      uid: user.uid ,
+      Doctor_mail:doctor.email ,
+      Doctor_name: doctor.name ,
+      Doctor_specialization: doctor.specialization,
       Doctor_photourl: doctor.Doctor_photourl || null,
       Doctor_Qualification: doctor.Doctor_Qualification || null, 
       Doctor_Experience: doctor.Doctor_Experience || null,
-      Doctor_specialization: doctor.Doctor_specialization || null,
+
     }
     return await setDoc(doctorref, doctordata, {
       merge: true,
@@ -89,9 +89,9 @@ export class DoctorService {
   async getAllDoctors() {
     const colref = collection(this.firestore, 'doctors')
     const docsnap = await getDocs(colref)
+    this.arr =[];
     docsnap.forEach(doc => {
        var dat = doc.data()
-       console.log(dat)
        this.arr.push(dat)
     })
     return this.arr
@@ -99,7 +99,6 @@ export class DoctorService {
   async get_count(){
     const colref = collection(this.firestore, 'doctors');
     this.doctorcount =  await (await getCountFromServer(colref)).data().count;
-    console.log(this.doctorcount);
     return this.doctorcount;
   }
 }
