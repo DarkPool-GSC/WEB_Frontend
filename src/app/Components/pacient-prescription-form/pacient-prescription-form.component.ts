@@ -21,6 +21,7 @@ export class PacientPrescriptionFormComponent {
    
    async onSubmit(prescription: string){
     console.log(this.medicines, prescription);
+    window.alert("The prescription is sent to patient successfully")
     const prec = {
       doctor : "very good doctor",
       patient :"Ill guy",

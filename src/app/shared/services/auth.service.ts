@@ -46,7 +46,7 @@ export class AuthService {
             return;
           }
           else {
-            this.router.navigate(['dashboard'])
+            this.router.navigate(['patient-prescription'])
           }
         }
       })
@@ -109,7 +109,7 @@ export class AuthService {
 
   async GoogleAuth() {
     signInWithPopup(this.fireAuth, new GoogleAuthProvider).then((result) => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['patient-prescription']);
       this.setUser(result.user);
       console.log(result);
     }).catch((error) => {

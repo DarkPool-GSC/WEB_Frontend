@@ -5,10 +5,7 @@
       <div class="icon">
         <fa-icon [icon]="faRightToBracket"></fa-icon>
     </div>
-      <div class="no-account-header">
-        <span> ALready Have a account </span>
-        <a routerLink="/login"> Sign in </a>
-      </div>
+
     </div>
     <span class="form-header">Sign Up</span>
     <div class="sign-in-with-google" (click)="authService.GoogleAuth()">
@@ -29,8 +26,8 @@
       <button type="submit" (click)="authService.Register(email.value, password.value)" class="submit-button">Sign
         Up</button>
         <div class="no-account-header">
-          <span> Don't Have a account </span>
-          <a routerLink="/register"> Sign up </a>
+          <span> ALready have an account </span>
+          <a routerLink="/login"> Sign In </a>
         </div>
     </form>
   </div>
