@@ -36,7 +36,7 @@ ___
 *  There are several people from marginalized communities who do not have access to basic health and hygiene education. These people spend their income on necessities like food and fuel, receiving no information about basic hygiene tips. 
 As a result of incorporating these basic healthcare tips in our project, we strive to enlighten the deprived section’s future in a positive manner. By making these a part of their daily lives, they will become less vulnerable to diseases. 
 ___
-# FEATURES OF OUR APPLICATION : star2:
+# FEATURES OF OUR APPLICATION :star2:
 
 1. Email verification for verification of patient data.
 2. Realtime updates on patient and doctor data for ease of management. 
@@ -46,7 +46,7 @@ ___
 6. Integrated backend of Mobile App and Website to make sign-up more accessible for patients from both platforms.
 ___
 
-# WORKFLOW : pushpin:
+# WORKFLOW :pushpin:
 The application work on two profiles namely patient and doctor along with dashbaord page for ease of data management for reception. 
 
 The mobile app is developed for the patients bringing Healthcare services to their hand and giving them control over their health. Since smartphones are a constant part of everyone's life throughout the day, medicine reminders in the mobile app become a very effective method to ensure timely medicine intake by the patients. 
