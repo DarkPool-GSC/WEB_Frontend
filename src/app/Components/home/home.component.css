@@ -115,6 +115,7 @@ li:hover svg{
     justify-content: space-between;
 }
 
+
 img {
     width: 40vw;
     margin-left: 1rem;
@@ -131,7 +132,9 @@ ul {
     list-style:disc;
     font-size: 1rem;
     font-weight: 300;
-    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 
@@ -191,6 +194,8 @@ ul {
 
 
 .footer-content {
+    margin-top: 1rem;
+    font-size: 1rem;
     font-weight: 300;
     width: 30vw;
 }

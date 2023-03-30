@@ -3,6 +3,7 @@
     margin-left: 2rem;
     background-color: #d5f6f6;
     border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 0.5px #939393;
 }
 
 .container:hover .icon {

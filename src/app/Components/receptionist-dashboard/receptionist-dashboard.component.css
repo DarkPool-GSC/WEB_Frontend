@@ -1,5 +1,9 @@
+body {
+    background-color: rgb(245, 250, 254);
+}
+
 .header {
-    margin-top: 2rem;
+    padding-top: 1rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
 }
