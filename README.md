@@ -19,7 +19,7 @@ ___
 # INSTALLATION
 
 * The app can be installed by directly downloading the APK file located at... on an __Android OS__ powered mobile device. To build the project on your own system, clone the repo___ and open it in __Android Studio__.
-* The website can be accessed at --. To build the website on your own system, clone the repo___,open it in __Visual Studio Code__, and type __"ng serve"__ in the terminal.
+* The website can be accessed at --. To build the website on your own system, clone [this repo](https://github.com/DarkPool-GSC/Health-Care-app),open it in __Visual Studio Code__, and type __"ng serve"__ in the terminal.
 ___
 # TECHSTACK :hammer_and_wrench:
 [![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=&lineCount=2&theme=github_dark&line1=FireBase,firebase,606ebd;kotlin,kotlin,5ce845;angular,angular,eac812;&line2=CSS3,CSS3,aff1d3;HTML5,HTML5,61c7bb;Typescript,typescript,b73746;)](https://github-readme-tech-stack.vercel.app/api/cards?title=&lineCount=2&theme=github_dark&line1=FireBase,firebase,606ebd;kotlin,kotlin,5ce845;angular,angular,eac812;&line2=CSS3,CSS3,aff1d3;HTML5,HTML5,61c7bb;Typescript,typescript,b73746;)
