@@ -1,8 +1,8 @@
 
 <div class="widget-container">
     <div class="widget">
-        <div class="icon">
-            <fa-icon [icon]="faStethoscope"></fa-icon>
+        <div class="icon flex items-center bg-white justify-center p-2 h-8 w-8 rounded-full">
+            <fa-icon [icon]="faStethoscope" class="m-2"></fa-icon>
         </div>
       <div class="value">
         <div class="top">Doctors</div>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="widget">
-        <div class="icon">
+        <div class="icon  flex items-center bg-white justify-center p-2 h-8 w-8 rounded-full">
             <fa-icon [icon]="faHeart"></fa-icon>
         </div>
       <div class="value">
@@ -20,13 +20,13 @@
     </div>
     <div class="buttons-left">
     <div class="button-container">
-    <div class="button" (click)="toggleModal1(true)">
+    <div class="button flex items-center" (click)="toggleModal1(true)">
       Add Patient
     </div>
    
     </div>
     <div class="button-container">
-      <div class="button" (click)="toggleModal2(true)">
+      <div class="button flex items-center" (click)="toggleModal2(true)">
         Add Details
       </div>
      

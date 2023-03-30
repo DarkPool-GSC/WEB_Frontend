@@ -12,6 +12,7 @@ import { getCountFromServer } from 'firebase/firestore';
 export class DoctorService {
   doctorcount = 0;
   arr:any[];
+  doctorArr : any;
   constructor(
     private firestore: Firestore,
     private router: Router,
@@ -94,6 +95,7 @@ export class DoctorService {
        var dat = doc.data()
        this.arr.push(dat)
     })
+    this.doctorArr = this.arr;
     return this.arr
   }
   async get_count(){
