@@ -27,13 +27,13 @@ ___
 # SUSTAINABLE GOALS TARGETED BY OUR PROJECT 
 
 *  ## Good Health and Wellbeing
-* An efficient appointment booking system can help patients schedule their appointments at a convenient time, reducing stress and anxiety with missing important appointments. Patients who have regular appointments with their healthcare providers are more likely to feel cared for and supported.
-* Patients who feel their healthcare provider is accessible and responsive are more likely to have positive outcomes and report higher levels of satisfaction with their care.
-* One of the biggest benefits of our medicine reminder is that it can help patients stick to their medication schedule more consistently.  Taking medicines at the right time is crucial to managing chronic health conditions and preventing complications. Our reminder system can help patients take their medicine on time, reducing the risk of missed doses or double doses, which can lead to adverse health effects.
+    * An efficient appointment booking system can help patients schedule their appointments at a convenient time, reducing stress and anxiety with missing important appointments. Patients who have regular appointments with their healthcare providers are more likely to feel cared for and supported.
+    * Patients who feel their healthcare provider is accessible and responsive are more likely to have positive outcomes and report higher levels of satisfaction with their care.
+    * One of the biggest benefits of our medicine reminder is that it can help patients stick to their medication schedule more consistently.  Taking medicines at the right time is crucial to managing chronic health conditions and preventing complications. Our reminder system can help patients take their medicine on time, reducing the risk of missed doses or double doses, which can lead to adverse health effects.
 *  ## Reduced Inequalities
-*  Our project is particularly beneficial for people who live in remote or underserved areas, and who may not have easy access to healthcare services. By making it easier for these individuals to schedule appointments our aim is to reduce disparities in healthcare access. 
+    *  Our project is particularly beneficial for people who live in remote or underserved areas, and who may not have easy access to healthcare services. By making it easier for these individuals to schedule appointments our aim is to reduce disparities in healthcare access. 
 *  ## Quality Education
-*  There are several people from marginalized communities who do not have access to basic health and hygiene education. These people spend their income on necessities like food and fuel, receiving no information about basic hygiene tips. 
+    *  There are several people from marginalized communities who do not have access to basic health and hygiene education. These people spend their income on necessities like food and fuel, receiving no information about basic hygiene tips. 
 As a result of incorporating these basic healthcare tips in our project, we strive to enlighten the deprived section’s future in a positive manner. By making these a part of their daily lives, they will become less vulnerable to diseases. 
 ___
 # FEATURES OF OUR APPLICATION :star2:
