@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { PatientService } from 'src/app/shared/services/hospital/patient.service';
 @Component({
   selector: 'app-list',
@@ -12,5 +12,12 @@ export class ListComponent {
   }
   async GetAllPatients (){
     this.arr = await this.patientservice.GetAllPatients();
+  }
+  sendToDoctor = false;
+  openSendToDoctor(value : boolean){
+    this.sendToDoctor = true;
+  }
+  CloseSendToDoctor(arg : any){
+    this.sendToDoctor = false;
   }
 }

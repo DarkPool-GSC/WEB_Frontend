@@ -29,6 +29,7 @@ import { ListComponent } from './Components/receptionist-dashboard/list/list.com
 import { DoctorFormComponent } from './Components/doctor-form/doctor-form.component';
 import { PacientPrescriptionFormComponent } from './Components/pacient-prescription-form/pacient-prescription-form.component';
 import { DoctorWidgetComponent } from './Components/receptionist-dashboard/doctor-widget/doctor-widget.component';
+import { DoctorModalComponent } from './Components/doctor-modal/doctor-modal.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { DoctorWidgetComponent } from './Components/receptionist-dashboard/docto
     DoctorFormComponent,
     PacientPrescriptionFormComponent,
     DoctorWidgetComponent,
+    DoctorModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,9 @@
 
 .transaction-wrapper {
-    width: 42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+    width: 48vw;
     margin-left: 2rem;
     background-color: #d5f6f6;
     border-radius: 1rem;
@@ -22,6 +25,10 @@
     font-family: Poppins;
   }
 
+  .title {
+    cursor: pointer;
+  }
+
   .transaction {
     display: flex;
     align-items: center;
@@ -34,30 +41,17 @@
   .transaction-heading {
     padding-bottom: 0.5rem;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: flex;
     align-items: center;
     font-family: Poppins;
-    padding-left: 1rem;
     padding-top: 1rem;
     border-bottom-width:2px;
     border-bottom-color:White;
     border-bottom-style: solid;
   }
 
-  .headings1 {
-    padding-left: 2.5rem;
-  }
-
-  .headings2 {
-    padding-left: 4rem;
-  }
-
-  .headings3 {
-    padding-left: 5.5rem;
-  }
-
-  .headings4 {
-    padding-left: 6.3rem;
-  }
 
   img {
     width: 45px;
@@ -68,7 +62,7 @@
   .title {
     padding: 10px;
     font-size: 16px;
-    width: 190px;
+    width: 20vw;
     font-family: Poppins;
     font-weight: 500;
   }
@@ -76,7 +70,7 @@
   .price {
     padding: 10px;
     font-size: 16px;
-    width: 90px;
+    width: 6vw;
     font-family: Poppins;
     font-weight: 500;
   }
@@ -85,16 +79,55 @@
     margin-top: 2px;
     font-size: 14px;
     text-transform: uppercase;
-    width: 150px;
+    width: 12vw;
     margin-left: 80px;
     font-family: Poppins;
     font-weight: 500;
   }
 
+
   .shop-location {
     padding: 10px;
     font-size: 16px;
-    width: 90px;
+    width: 6vw;
     font-family: Poppins;
     font-weight: 500;
   }
+
+  .modalInvisible{
+    display: none;
+}
+.modalVisible{
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.2);
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    
+}
+
+  @media screen and (max-width : 600px){
+    .widget-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .widget{
+        width: 80%;
+    }
+    .button-container{
+        margin-right: 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .button{
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+}

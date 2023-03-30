@@ -15,14 +15,18 @@
         Ailments
       </div>
     </div>
-    <div class="transaction" *ngFor="let dat of arr">
+    <div class="transaction" (click)="openSendToDoctor(true)" *ngFor="let dat of arr">
       <!--<div class="image">
         <img [src]="transaction.image_fieldurl" alt="" />
       </div>-->
-      <div class="title">{{ dat.display_name  }}</div>
+      <div class="title" >{{ dat.display_name  }}</div>
+
       <div class="price">{{ dat.Age }}</div>
       <div class="shop-location">{{dat.Phone_no}}</div>
         <div class="location">{{ dat.Ailments }}</div>
     </div>
+    <div [ngClass]="{'modalVisible' : sendToDoctor, 'modalInvisible' : !sendToDoctor}">
+
+      <app-doctor-modal (CloseSendToDoctor)="CloseSendToDoctor($event)" ></app-doctor-modal>
   </div>
 </div> 
