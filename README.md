@@ -56,7 +56,7 @@ ______
 ## MOBILE APP :iphone:
 1. Splash Screen
 After installing the application the first screen that is encountered is a splash screen with a logo and tagline.
-![Screenshot_20230330-230433_HealthCare](https://user-images.githubusercontent.com/96631048/228958971-c0ee4c16-f9dc-4042-855e-0362518213e7.jpg)
+![Screenshot_20230330-230433_HealthCare](https://user-images.githubusercontent.com/96631048/228958971-c0ee4c16-f9dc-4042-855e-0362518213e7.jpg =x250)
 
 2. Login Activity
 Registered users will be able to login using credentials. 
