@@ -26,11 +26,11 @@ ___
 ___
 # SUSTAINABLE GOALS TARGETED BY OUR PROJECT 
 
-1  ## Good Health and Wellbeing
+*  ## Good Health and Wellbeing
 * An efficient appointment booking system can help patients schedule their appointments at a convenient time, reducing stress and anxiety with missing important appointments. Patients who have regular appointments with their healthcare providers are more likely to feel cared for and supported.
 * Patients who feel their healthcare provider is accessible and responsive are more likely to have positive outcomes and report higher levels of satisfaction with their care.
 * One of the biggest benefits of our medicine reminder is that it can help patients stick to their medication schedule more consistently.  Taking medicines at the right time is crucial to managing chronic health conditions and preventing complications. Our reminder system can help patients take their medicine on time, reducing the risk of missed doses or double doses, which can lead to adverse health effects.
-2  ## Reduced Inequalities
-3  ## Quality Education
-4  ## Sustainable Development
+*  ## Reduced Inequalities
+*  ## Quality Education
+*  ## Sustainable Development
 
