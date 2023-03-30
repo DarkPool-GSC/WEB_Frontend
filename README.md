@@ -31,6 +31,24 @@ ___
 * Patients who feel their healthcare provider is accessible and responsive are more likely to have positive outcomes and report higher levels of satisfaction with their care.
 * One of the biggest benefits of our medicine reminder is that it can help patients stick to their medication schedule more consistently.  Taking medicines at the right time is crucial to managing chronic health conditions and preventing complications. Our reminder system can help patients take their medicine on time, reducing the risk of missed doses or double doses, which can lead to adverse health effects.
 *  ## Reduced Inequalities
+*  Our project is particularly beneficial for people who live in remote or underserved areas, and who may not have easy access to healthcare services. By making it easier for these individuals to schedule appointments our aim is to reduce disparities in healthcare access. 
 *  ## Quality Education
-*  ## Sustainable Development
+*  There are several people from marginalized communities who do not have access to basic health and hygiene education. These people spend their income on necessities like food and fuel, receiving no information about basic hygiene tips. 
+As a result of incorporating these basic healthcare tips in our project, we strive to enlighten the deprived section’s future in a positive manner. By making these a part of their daily lives, they will become less vulnerable to diseases. 
+___
+# FEATURES OF OUR APPLICATION : star2:
 
+1. Email verification for verification of patient data.
+2. Realtime updates on patient and doctor data for ease of management. 
+3. Sign in with Google feature for faster authentication.
+4. Unique Id for patients to reduce the hassle of re-signup in case of repeated appointments. 
+5. Separate field in prescription form for doctor to add special notes.
+6. Integrated backend of Mobile App and Website to make sign-up more accessible for patients from both platforms.
+___
+
+# WORKFLOW : pushpin:
+The application work on two profiles namely patient and doctor along with dashbaord page for ease of data management for reception. 
+
+The mobile app is developed for the patients bringing Healthcare services to their hand and giving them control over their health. Since smartphones are a constant part of everyone's life throughout the day, medicine reminders in the mobile app become a very effective method to ensure timely medicine intake by the patients. 
+The website is developed keeping in mind the hospitals making it more convenient to manage patient data in one glance. It further simplifies the prescription process for the doctors and gives them a better insight on the patient profiles.
+______
