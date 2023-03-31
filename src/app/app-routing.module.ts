@@ -10,6 +10,7 @@ import { DoctorDashboardComponent } from './Components/doctor-dashboard/doctor-d
 import { VerifyEmailComponent } from './Components/login/verify-email/verify-email.component';
 import { ForgetPasswordComponent } from './Components/login/forget-password/forget-password.component';
 import { ReceptionistDashboardComponent } from './Components/receptionist-dashboard/receptionist-dashboard.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -22,7 +23,10 @@ const routes: Routes = [
   { path: 'verify-email', component: VerifyEmailComponent },
   { path: 'forgot-password', component: ForgetPasswordComponent },
   {
-    path: 'dashboard', component: DoctorDashboardComponent
+    path: 'dashboard', component: DashboardComponent
+  },
+  {
+    path : 'doctor-dashboard', component :DoctorDashboardComponent
   },
   { path : 'reception-dashboard', component: ReceptionistDashboardComponent},
   {path : 'patient-prescription', component: PacientPrescriptionFormComponent}

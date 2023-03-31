@@ -26,7 +26,7 @@
         <div class="location">{{ dat.Ailments }}</div>
     </div>
     <div [ngClass]="{'modalVisible' : sendToDoctor, 'modalInvisible' : !sendToDoctor}">
-
+      <!-- <app-doctor-widget></app-doctor-widget> -->
       <app-doctor-modal (CloseSendToDoctor)="CloseSendToDoctor($event)" ></app-doctor-modal>
   </div>
 </div> 

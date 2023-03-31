@@ -1,21 +1,31 @@
-<div class="signup">
-    <div class="container">
-        <div class="add-opatient-header">
-
-            <div class="sign-up-heading">
-                Send To Doctor
-            </div>
-            <span>
-                X
-            </span>
+<div class="container">
+    <div class="header">
+      <div class="section-title">Doctors    <div class="icon bg-white h-8 w-8 rounded-full flex justify-center items-center">
+    </div></div>
+      <div class="button-container">
+        <div class="button flex items-center justify-center">
+          Add Doctor
         </div>
-        <div class="bottom">
-            <select name="doctor" id="doctor">
-                <option value="doctor1">Doctor 1</option>
-                <option value="doctor2">Doctor 2</option>
-              </select>
-              <button type="submit" 
-              class="submit-button">Save</button>
-    </div>
-    </div>
-</div>
+       
+        </div>
+      
+      </div>
+      <div class="transaction-wrapper">
+          <div class="transaction-heading">
+            <div class="headings1">
+              Display Name
+            </div>
+            <div class="headings2">
+              Specialization
+            </div>
+  
+          </div>
+          <div class="transaction" *ngFor="let dat of arr">
+            <!--<div class="image">
+              <img [src]="transaction.image_fieldurl" alt="" />
+            </div>-->
+            <div class="title">{{ dat.Doctor_name  }}</div>
+            <div class="price">{{ dat.Doctor_specialization }}</div>
+          </div>
+        </div>
+  </div>

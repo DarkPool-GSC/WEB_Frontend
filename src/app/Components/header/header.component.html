@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div>
-        <img src="../../../assets/logo2.png" alt="RemediNow">
+        <img src="../../../assets/logo2.png" alt="RemediNow" class="h-8 w-8">
     </div>
     <div class="navlinks">
 
@@ -20,7 +20,7 @@
 </nav>
 <div [ngClass]="{'dropdown' : dropDownState, 'nav-dropdown' : !dropDownState}">
     <a routerLink="/" routerLinkActive="active">Home</a>
-    <a routerLink="/reception-dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
     <a routerLink="/team" routerLinkActive="active">Team</a>
     <a routerLink="/login" routerLinkActive="active">Login</a>
 </div>

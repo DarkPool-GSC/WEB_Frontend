@@ -9,7 +9,14 @@ import { DoctorService } from 'src/app/shared/services/hospital/doctor.service';
 })
 
 export class DoctorModalComponent {
-  arr = [{Doctor_name : "sddvss", Doctor_specialization : "kiyfuy"}, {Doctor_name : "sddvss", Doctor_specialization : "iygiy"}];
+  addDoctorModalState = false;
+  openAddDoctorModal(value : boolean){
+    this.addDoctorModalState = true;
+  }
+  onAddDoctorClose(arg : any){
+    this.addDoctorModalState = false;
+  }
+  arr:any;
   constructor(public doctorservice: DoctorService) { 
     this.getAllDoctors();
   }

@@ -30,6 +30,7 @@ import { DoctorFormComponent } from './Components/doctor-form/doctor-form.compon
 import { PacientPrescriptionFormComponent } from './Components/pacient-prescription-form/pacient-prescription-form.component';
 import { DoctorWidgetComponent } from './Components/receptionist-dashboard/doctor-widget/doctor-widget.component';
 import { DoctorModalComponent } from './Components/doctor-modal/doctor-modal.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { DoctorModalComponent } from './Components/doctor-modal/doctor-modal.com
     PacientPrescriptionFormComponent,
     DoctorWidgetComponent,
     DoctorModalComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

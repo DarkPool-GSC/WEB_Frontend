@@ -1,6 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 
-import { Firestore, collectionData, collection, doc, setDoc } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, doc, setDoc, getDoc } from '@angular/fire/firestore';
 import {
   Auth,
   signOut,
@@ -19,6 +19,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
+  userType = "";
   userData: any;
   constructor(
     private fireAuth: Auth, private firestore: Firestore,
@@ -26,7 +27,9 @@ export class AuthService {
   ) {
     authState(this.fireAuth).subscribe((user) => {
       if (user) {
+        this.getUserData(user);
         this.userData = user;
+        
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user')!);
       } else {
@@ -35,10 +38,26 @@ export class AuthService {
       }
     });
   }
-
+  async getUserData(user : any){
+    const userRef = doc(this.firestore, `users/${user.uid}`);
+      await getDoc(userRef).then((result)=>{
+        if(result){
+          this.userData = result.data();
+          console.log(this.userData)
+          this.userType = this.userData.userType;
+        }
+      })
+  }
   async Login(email: string, password: string) {
-    return signInWithEmailAndPassword(this.fireAuth, email, password).then((result) => {
-      this.setUser(result.user);
+    await signInWithEmailAndPassword(this.fireAuth, email, password).then(async (result) => {
+    const userRef = doc(this.firestore, `users/${result.user.uid}`);
+      await getDoc(userRef).then((result)=>{
+        if(result){
+          this.userData = result.data();
+          console.log(this.userData)
+          this.userType = this.userData.userType;
+        }
+      })
       authState(this.fireAuth).subscribe((user) => {
         if (user) {
           if (!user.emailVerified) {
@@ -57,6 +76,7 @@ export class AuthService {
 
   async Register(email: string, password: string) {
     return createUserWithEmailAndPassword(this.fireAuth, email, password).then((result) => {
+      this.userType =  "";
       this.SendVerificationMail();
       this.setUser(result.user);
     }).catch((error) => {
@@ -65,9 +85,7 @@ export class AuthService {
   }
   async SendVerificationMail() {
     const user = this.fireAuth.currentUser;
-    console.log("In process")
     if (user) {
-      console.log("sending mail to ", user);
       sendEmailVerification(user).then(() => {
         this.router.navigate(['verify-email'])
       })
@@ -75,13 +93,15 @@ export class AuthService {
 
   }
   setUser(user: any) {
+    console.log("This is user id", user.uid, user);
     const userRef = doc(this.firestore, `users/${user.uid}`);
     const userData: User = {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
-      emailVerified: user.emailVerified
+      emailVerified: user.emailVerified,
+      userType : ""
     }
     return setDoc(userRef, userData, {
       merge: true,
@@ -111,7 +131,6 @@ export class AuthService {
     signInWithPopup(this.fireAuth, new GoogleAuthProvider).then((result) => {
       this.router.navigate(['dashboard']);
       this.setUser(result.user);
-      console.log(result);
     }).catch((error) => {
       window.alert(error);
     })

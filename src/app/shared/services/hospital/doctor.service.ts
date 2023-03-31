@@ -36,7 +36,8 @@ export class DoctorService {
   }
 
   async setDoctor(user : any, doctor: any) {
-    const doctorref = doc(this.firestore, `doctors/${user.uid}`)
+    const doctorref = doc(this.firestore, `doctors/${user.uid}`);
+    const userRef = doc(this.firestore, `users/${user.uid}`);
     const doctordata: Doctor = {
       uid: user.uid ,
       Doctor_mail:doctor.email ,
@@ -47,6 +48,17 @@ export class DoctorService {
       Doctor_Experience: doctor.Doctor_Experience || null,
 
     }
+    const userData = {
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+      emailVerified: true,
+      userType : "Doctor"
+    }
+    await setDoc(userRef, userData, {
+      merge: true,
+    });
     return await setDoc(doctorref, doctordata, {
       merge: true,
     })
