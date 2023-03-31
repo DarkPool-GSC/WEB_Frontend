@@ -1,11 +1,7 @@
-
-<div [ngClass]="{'hidden' : !isRs}">
-    
-    <app-receptionist-dashboard></app-receptionist-dashboard>
+<div [ngClass]="{ hidden: !isRs }">
+  <app-receptionist-dashboard></app-receptionist-dashboard>
 </div>
 
-
-<div [ngClass]="{'hidden' : !isDoc}">
-    <app-pacient-prescription-form></app-pacient-prescription-form>
-    
+<div [ngClass]="{ hidden: !isDoc }">
+  <app-pacient-prescription-form></app-pacient-prescription-form>
 </div>

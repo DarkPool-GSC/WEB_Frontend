@@ -1,100 +1,100 @@
 <div class="flex flex-row w-full p-8 bg-gray-100 min-h-screen">
-
-    <div class="flex flex-col w-full">
-        <span class="text-4xl font-medium bg-[#DCFFFF] w-full py-3 px-3 rounded-lg shadow-lg">
-            Patient Overview
-        </span>
-        <div class="mt-8 bg-white p-5 rounded-xl shadow-xl">
-            <p class="text-xl font-semibold mt-4 flex text-[#20B5B5]">
-                Patient Details
-        </p>
-        <div class="flex flex-row justify-between">
-
-            <div class="mt-4">
-                
-                <span  class="text-lg font-semibold text-[#20B5B5]">
-                    Name :
-                </span>
-                <span>
-                    Tanuj Khanna
-                </span>
-            </div>
-            <div>
-                
-                <span class="text-lg font-semibold text-[#20B5B5]">
-                    Phone No : 
-            </span>
-            <span>
-                1048194909
-            </span>
+  <div class="flex flex-col w-full">
+    <span
+      class="text-4xl font-medium bg-[#DCFFFF] w-full py-3 px-3 rounded-lg shadow-lg"
+    >
+      Patient Overview
+    </span>
+    <div class="mt-8 bg-white p-5 rounded-xl shadow-xl">
+      <p class="text-xl font-semibold mt-4 flex text-[#20B5B5]">
+        Patient Details
+      </p>
+      <div class="flex flex-row justify-between">
+        <div class="mt-4">
+          <span class="text-lg font-semibold text-[#20B5B5]"> Name : </span>
+          <span> Tanuj Khanna </span>
         </div>
-        
-</div>
-<div class="flex flex-row justify-between ">
+        <div>
+          <span class="text-lg font-semibold text-[#20B5B5]"> Phone No : </span>
+          <span> 1048194909 </span>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between">
+        <div class="mt-4">
+          <span class="text-lg font-semibold text-[#20B5B5]"> Weight : </span>
+          <span> 60 KG </span>
+        </div>
+        <div>
+          <span class="text-lg font-semibold text-[#20B5B5]"> Ailment : </span>
+          <span> Cervical </span>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-row items-center">
+        <span class="text-2xl font-semibold text-[#20B5B5]">
+          Last Visit :
+        </span>
+        <span class="text-xl ml-4"> 11/02 </span>
+      </div>
+      <div class="mt-8">
+        <span class="text-2xl flex mb-2"> Genral Prescription </span>
+        <textarea
+          #prescription
+          placeholder="Enter the Genral Prescription"
+          class="p-4 h-40 border my-4 rounded-xl bg-[#DCFFFF] w-full"
+        ></textarea>
+      </div>
 
-    <div class="mt-4">
-        
-        <span  class="text-lg font-semibold text-[#20B5B5]">
-            Weight :
-        </span>
-        <span>
-             60 KG
-        </span>
-    </div>
-    <div>
-        
-        <span class="text-lg font-semibold text-[#20B5B5]">
-            Ailment : 
-    </span>
-    <span>
-            Cervical
-    </span>
-</div>
-</div>
-<div class="mt-8 flex flex-row items-center">
-    <span class="text-2xl font-semibold  text-[#20B5B5]">
-        Last Visit :
-    </span>
-    <span class="text-xl ml-4">
-        11/02
-    </span>
-</div>
-    <div class="mt-8">
-        <span class="text-2xl flex mb-2">
-            Genral Prescription
-        </span>
-        <textarea #prescription placeholder="Enter the Genral Prescription" class="p-4 h-40 border my-4 rounded-xl bg-[#DCFFFF] w-full "></textarea>
-    </div>
-  
-    <div class="w-full">
+      <div class="w-full">
         <div class="rounded-xl flex w-full flex-col">
-            <div class="flex flex-col w-full">
-                <span class="text-xl font-medium flex mb-2">
-                    Medicine
-                </span>
-                <div class="transaction" *ngFor="let dat of medicines;let indexOfelement=index;">
-
-                    <div class="flex justify-between w-full my-2">
-                        <input placeholder="Medicine" #medicine (keyup)="onEnter(medicine.value, indexOfelement, 'medicine')" class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]">
-                        <input placeholder="Dosage" #dosage (keyup)="onEnter(dosage.value, indexOfelement, 'dosage')" class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]">
-                        <input placeholder="Coment" #coment (keyup)="onEnter(coment.value, indexOfelement, 'comment')" class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]">
-                    </div>
-                </div>
-                
+          <div class="flex flex-col w-full">
+            <span class="text-xl font-medium flex mb-2"> Medicine </span>
+            <div
+              class="transaction"
+              *ngFor="let dat of medicines; let indexOfelement = index"
+            >
+              <div class="flex justify-between w-full my-2">
+                <input
+                  placeholder="Medicine"
+                  #medicine
+                  (keyup)="onEnter(medicine.value, indexOfelement, 'medicine')"
+                  class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]"
+                />
+                <input
+                  placeholder="Dosage"
+                  #dosage
+                  (keyup)="onEnter(dosage.value, indexOfelement, 'dosage')"
+                  class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]"
+                />
+                <input
+                  placeholder="Coment"
+                  #coment
+                  (keyup)="onEnter(coment.value, indexOfelement, 'comment')"
+                  class="bg-[#DCFFFF] p-4 py-2 rounded w-[30%]"
+                />
+              </div>
             </div>
-            <div class="flex">
-
-                <button class="py-2 px-4 bg-[#3cafaf] rounded-lg text-white mt-5 flex" (click)="addMoreMedicine()">
-                    Add More
-                </button>
-            </div>
-           
-            <button (click)="onSubmit(prescription.value)" class="py-2 px-4 bg-[#20B5B5] text-xl font-medium rounded-lg text-white mt-5 ">
-                Submit
+          </div>
+          <div class="flex">
+            <button
+              class="py-2 px-4 bg-[#3cafaf] rounded-lg text-white mt-5 flex"
+              (click)="addMoreMedicine()"
+            >
+              Add More
             </button>
+          </div>
+
+          <button
+            (click)="onSubmit(prescription.value)"
+            class="py-2 px-4 bg-[#20B5B5] text-xl font-medium rounded-lg text-white mt-5"
+          >
+            Submit
+          </button>
         </div>
+      </div>
     </div>
-</div>
-</div>
-<img class="hidden lg:flex object-cover ml-8 rounded-xl w-72 shadow-md" src="../../../assets/prescription.png" >
+  </div>
+  <img
+    class="hidden lg:flex object-cover ml-8 rounded-xl w-72 shadow-md"
+    src="../../../assets/prescription.png"
+  />
 </div>
