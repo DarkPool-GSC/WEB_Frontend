@@ -14,7 +14,7 @@ _India has the misfortune of having one of the most inefficient healthcare syste
 Our project, Remedinow, was created with the sole aim of removing all these hurdles, and making Healthcare available for all.
 
 ___
-### The Video demonstration of the project can be seen here
+### The Video demonstration of the project can be seen here https://www.youtube.com/watch?v=NPvSrVgy2pA
 ___
 # INSTALLATION
 
