@@ -6,26 +6,18 @@
         <div class="button flex items-center justify-center">
           Add Doctor
         </div>
-       
-        </div>
-      
-      </div>
-      <div class="transaction-wrapper">
-          <div class="transaction-heading">
-            <div class="headings1">
-              Display Name
-            </div>
-            <div class="headings2">
-              Specialization
-            </div>
-  
-          </div>
-          <div class="transaction" *ngFor="let dat of arr">
-            <!--<div class="image">
-              <img [src]="transaction.image_fieldurl" alt="" />
-            </div>-->
-            <div class="title">{{ dat.Doctor_name  }}</div>
-            <div class="price">{{ dat.Doctor_specialization }}</div>
-          </div>
-        </div>
-  </div>
+        <div class="bottom">
+            <select name="doctor" id="doctor">
+                <option value="doctor1">Parth Sharma</option>
+                <option value="doctor2">Anashi Thakur</option>
+                <option value="doctor3">Soniya Khanna</option>
+                <option value="doctor4">Sidharth Kapoor</option>
+                <option value="doctor5">Sneha Jain</option>
+                <option value="doctor6">Krishna Gambhir</option>
+
+              </select>
+              <button type="submit" 
+              class="submit-button">Save</button>
+    </div>
+    </div>
+</div>

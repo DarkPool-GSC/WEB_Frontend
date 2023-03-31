@@ -46,9 +46,9 @@ export class PatientService {
       uid: patient.id || null,
       email: patient.email,
       display_name: patient.display_name || name,
-      Age: patient.Age || null,
-      Phone_No: patient.Phone_No || null,
-      Ailments: patient.Ailments || null,
+      age: patient.age || null,
+      phone_No: patient.phone_No || null,
+      ailments: patient.ailments || null,
       Notes: patient.Notes || null,
       Medication_name: patient.Medication_name || null,
       Medication_Dose: patient.Medication_Dose || null,
@@ -74,9 +74,9 @@ export class PatientService {
   async get_updated_patient(id: string, name?: string, age?: number, phoneno?: string, ailments?: string) {
     const P: any = {
       display_name: name,
-      Age: age,
-      Phone_no: phoneno,
-      Ailments: ailments,
+      age: age,
+      phone_no: phoneno,
+      ailments: ailments,
     }
     this.UpdatePatient(id, P)
   }

@@ -18,7 +18,7 @@ ___
 ___
 # INSTALLATION
 
-* The app can be installed by directly downloading the APK file located at... on an __Android OS__ powered mobile device. To build the project on your own system, clone the repo___ and open it in __Android Studio__.
+* The app can be installed by directly downloading the APK file located at... on an __Android OS__ powered mobile device. To build the project on your own system, clone the repo https://github.com/adhishrayas/Remedi_Now_app and open it in __Android Studio__.
 * The website can be accessed at --. To build the website on your own system, clone [this repo](https://github.com/DarkPool-GSC/Health-Care-app),open it in __Visual Studio Code__, and type __"ng serve"__ in the terminal.
 ___
 # TECHSTACK :hammer_and_wrench:
@@ -52,3 +52,105 @@ The application work on two profiles namely patient and doctor along with dashba
 The mobile app is developed for the patients bringing Healthcare services to their hand and giving them control over their health. Since smartphones are a constant part of everyone's life throughout the day, medicine reminders in the mobile app become a very effective method to ensure timely medicine intake by the patients. 
 The website is developed keeping in mind the hospitals making it more convenient to manage patient data in one glance. It further simplifies the prescription process for the doctors and gives them a better insight on the patient profiles.
 ______
+#USAGE AND FUNCTIONALITY OF REMEDINOW :dart:
+## MOBILE APP :iphone:
+### Splash Screen: <br>
+After installing the application the first screen that is encountered is a splash screen with a logo and tagline.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/96631048/228962718-3f3d863e-3a0b-48d8-9d0c-da2f61060bee.jpg" width="200px"/>
+
+
+### Login Activity: <br>
+Registered users will be able to login using credentials. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/96631048/228959603-f525a382-198d-4fb0-a851-f4a62e93fd0e.jpg" width="200px"/>
+
+
+### Patient Details and Registration: <br>
+During signing up, each user must enter his/her details. This includes their Full Name, Email and Password. This can also be done using the website if the user has already reached the hospital premises. In addition, a Google login has been provided so that users can log in directly using their Google account.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/96631048/228958971-c0ee4c16-f9dc-4042-855e-0362518213e7.jpg" width="200px"/>
+
+
+### Appointment Booking: <br>
+This activity will allow patients to search for doctors according to their need. It also contains a special health tip section to give them updates about the latest medical trends.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/96631048/228962896-d69bffad-f495-40ea-9046-6fa125bbc849.jpg" width="200px"/>
+
+### Prescription Reminders: <br>
+This activity is where the prescriptions added by the doctor on the website are visible. The patient also receives reminder notifications through this page including information about the number of dosage left for each medicine.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/96631048/228981029-ec4eb2b0-35dc-4d93-a255-54221c0f5b41.jpeg" width="200px"/>
+
+
+
+
+## WEBSITE :computer:
+### 1. Home Page <br>
+
+This is the landing page of the website which contains information about the aim of our project, our vision and information about our mobile application.
+<pre>
+<img src="https://user-images.githubusercontent.com/96631048/228964809-18e86bdf-416b-42db-b549-3e761c7f3815.png" width="400px" margin="20px"/>    <img src="https://user-images.githubusercontent.com/96631048/228964796-b014f228-594b-4a12-b74f-0f8efff83825.png" width="400px"/> </pre>
+<pre>
+ <img src="https://user-images.githubusercontent.com/96631048/228964820-ae4219e6-6395-4579-90f7-a8f8a6ab670d.png" width="400px"/>   <img src="https://user-images.githubusercontent.com/96631048/228964815-c6e7ba1b-49bf-4eb6-9145-d67f50023dbe.png" width="400px"/>
+</pre>
+### 2.Dashboard Page <br>
+This is the hospital dashboard where the hospitals can view all realtime data including total registered patients, total registered doctors and their respective detailed information. <br>
+
+<pre>
+<img src="https://user-images.githubusercontent.com/96631048/228967842-94962758-b0e4-4b54-a1eb-9d36ae942881.png" width="600px"/>
+</pre>
+
+  * The Add Patient button is used to Add Patients to the Appointments List.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228968367-725c0e71-c864-489d-a6dd-5c1b4dae195e.png" width="600px"/>
+  </pre>
+  
+  * The Add Details button is used to Add Patient Details such as Age, Phone No. and Ailments.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228968609-1ca70fc0-9a08-479d-9ff9-79e75ca43f11.png" width="600px"/>
+  </pre>
+  
+  * The Add Doctors button is to make an account for new doctors of the hospitals, it contains field such as Name and Specialization.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228968843-b27b6f18-a8d6-4921-a10a-e824a65900ec.png" width="600px"/>
+  </pre>
+  
+  * On clicking on each patient the Send To Doctor Pop-Up shows up, this is to assign the patient to a specific doctor.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228969450-3519f98b-9caa-4066-9edf-e4655f52d8c1.png" width="400px"/>    <img src="https://user-images.githubusercontent.com/96631048/228969712-c70d8a30-3001-44be-840f-d25bd5828d17.png" width="400px"/>
+  </pre>
+
+### 3. Sign In Page <br>
+
+
+  * This is the page for already regsitered users (mainly doctors). 
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228967205-58faf2ac-cbc5-4f36-98e3-9f5bfd6cfbaf.png" width="600px"/>
+  </pre>
+  
+  * Once logged in the doctors can update the prescription for the patients assigned to them through the Send To Doctor feature.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228970497-e45d2a7e-dd70-41cb-9a14-a7ee62db5f9c.png" width="400px"/>    <img src="https://user-images.githubusercontent.com/96631048/228970561-c7f5fb48-0924-46df-bc5c-104882ad0de9.png" width="400px"/>
+  </pre>
+  
+  * On clicking the submit button the prescription will be updated and the doctor will get an alert about the same. The patient will receive the medicine details (reminders and dosage remaining) on his mobile application.
+  <pre>
+  <img src="https://user-images.githubusercontent.com/96631048/228971314-abfd2a4a-00ce-4790-af08-38a5c615faea.png" width="600px"/>
+  </pre>
+  
+### 4. Sign Up Page <br>
+
+This is the page for new users who are using the application or website for the first time. This can also be used by receptionist to register patients who are already in the hospital premises.
+<pre>
+<img src="https://user-images.githubusercontent.com/96631048/228967282-00296864-7d71-4600-8ee8-3cd03a2a7cf1.png" width="600px"/>
+</pre>
+
+### 5. Team Page <br>
+
+This page contains information about the team members of our project and their respective roles.
+<pre>
+<img src="https://user-images.githubusercontent.com/96631048/228971392-2190647e-fa5b-4692-8771-b02a651de89f.png" width="600px"/>
+</pre>
+
+## THANKS FOR READING! :sparkles:
