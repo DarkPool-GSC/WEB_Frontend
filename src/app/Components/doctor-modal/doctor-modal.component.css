@@ -85,7 +85,7 @@ select{
     margin-top: 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    width: 15vw;
+    /* width: 15vw; */
     height: 3vw;
     font-size: 1.2rem;
     margin-bottom: 3rem;
@@ -115,7 +115,7 @@ select{
     font-weight: 500;
     margin-top: 1rem;
     padding-top: 1rem;
-    margin-left: 2rem;
+
     margin-bottom: 1rem;
     font-family: Poppins;
     display: flex;
@@ -204,10 +204,8 @@ select{
 }
 
 .button-container {
-  margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    margin-right: 1rem;
 }
 
 .button:hover {

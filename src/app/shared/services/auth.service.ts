@@ -65,7 +65,7 @@ export class AuthService {
             return;
           }
           else {
-            this.router.navigate(['patient-prescription'])
+            this.router.navigate(['dashboard'])
           }
         }
       })
