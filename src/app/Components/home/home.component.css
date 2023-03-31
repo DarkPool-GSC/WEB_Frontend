@@ -1,15 +1,3 @@
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.header-top {
-    background-color: #DCFFFF;
-    height: 75vh;
-}
-
 .header-h1 {
     font-size: 3rem;
     font-weight: 600;
@@ -109,8 +97,8 @@ li:hover svg{
 }
 
 .s2 {
-    list-style: none;
     display: flex;
+    list-style: none;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -126,7 +114,6 @@ ul {
     margin: 0;
     padding: 0;
 }
-
 .s2-sublist {
     padding-top: 1rem;
     list-style:disc;
@@ -136,43 +123,23 @@ ul {
     flex-direction: column;
     row-gap: 1rem;
 }
-
-
-
-.s3 {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.s3-sublist li {
-    list-style: none;
-    padding-bottom: 1rem;
-}
-
-
 .bg {
     background-color: #DCFFFF;
 }
-
 .s4 {
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
-
 .s4-sublist {
     display: flex;
     flex-direction: column;
     width: 40vw;
 }
-
-
 .s4-sublist li {
     list-style: none;
     padding-bottom: 2rem;
 }
-
 .footer {
     background-color: #20B5B5;
     padding-top: 3rem;
@@ -180,42 +147,29 @@ ul {
     color: white;
     padding-left: 4rem;
 }
-
 .footer-list {
     list-style: none;
     align-items: left;
     width: 60vw;
 }
-
 .footer-heading {
     font-weight: 600;
     font-size: 1.2rem;
 }
-
-
 .footer-content {
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 300;
     width: 30vw;
 }
-
 .highlight {
     color: #20B5B5;
 }
-
 svg {
     width: 4vw;
     height: 4vh;
 }
-
-
 @media screen and (max-width:  800px){
-    .header-top {
-        background-color: #DCFFFF;
-        height: 40vh;
-    }
-
     .header-h1 {
         font-size: 2.5rem;
         padding-top: 2rem;
@@ -223,47 +177,25 @@ svg {
         margin: 0;
         text-align: center;
     }
-    
     .header-h2 {
         font-size: 3rem;
-        font-weight: 700;
         padding-left: 0;
         margin: 0;
-        color: #20B5B5;
         text-align: center;
     }
-
     .header-bottom {
-        /* height: 5vh; */
         padding-top: 0.5rem;
         padding-bottom: 1.5rem;
         text-align: center;
     }
-
     .stats {
         align-content: center;
         justify-content: center;
     }
-
-    .stat-item {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
     .stat-big {
         font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .stat-small {
-        font-size: 0.8rem;
-        font-weight: 300;
-    }
 
+    }
 .section {
     padding-left: 2rem;
     padding-top: 1rem;
@@ -290,31 +222,20 @@ svg {
         text-align: center;
     }
     .s2 {
-        display: flex;
         flex-direction: column;
         row-gap: 1rem;
         align-items: center;
-        justify-content: center;
     }
 
     .s2-sublist li {
         margin: 0.5rem;
     }
 
-    .s3 {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        align-items: center;
-        justify-content: center;
-    }
-
     .s4 {
-        display: flex;
+
         flex-direction: column;
         row-gap: 1rem;
         align-items: center;
-        justify-content: center;
     }
 
     .s4-sublist {
@@ -331,9 +252,6 @@ svg {
         row-gap: 1rem;
     }
 
-    .footer-content{
-        width: 30rem;
-    }
 
     .footer-content {
         width: 80vw;
@@ -342,54 +260,14 @@ svg {
 
  @media screen and (max-width: 500px) {
 
-    .header-top {
-        background-color: #DCFFFF;
-        height: 40vh;
-    }
-
     .header-h1 {
-        font-size: 2.5rem;
-        padding-top: 2rem;
         padding-left: 1rem;
-    }
-    
-    .header-h2 {
-        font-size: 3rem;
-        font-weight: 700;
-        padding-left: 1rem;
-        color: #20B5B5;
     }
 
-    .header-bottom {
-        /* height: 5vh; */
-        padding-top: 0.5rem;
-        padding-bottom: 1.5rem;
-    }
 
     .stat-item {
         padding-left: 2rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-    
-    .stat-big {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .stat-small {
-        font-size: 0.8rem;
-        font-weight: 300;
-    }
-
-.section {
-    padding-left: 2rem;
-    margin-top: 1rem;
-}
     .s1 {
         display: flex;
         flex-direction: column;
@@ -397,51 +275,16 @@ svg {
 
     img {
         width: 80vw;
-        
     }
 
     .section-heading {
         font-size: 7vw;
     }
     .s2 {
-        display: flex;
-        flex-direction: column;
         row-gap: 1rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .s2-sublist li {
-        margin: 0.5rem;
-    }
-
-    .s3 {
-        display: flex;
-        flex-direction: column;
-        row-gap: 3rem;
     }
 
     .s4 {
-        display: flex;
-        flex-direction: column;
         row-gap: 3rem;
-    }
-
-    .footer {
-        padding-left: 2rem;
-    }
-
-    .footer-list {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-    }
-
-    .footer-content{
-        width: 30rem;
-    }
-
-    .footer-content {
-        width: 80vw;
     }
  }
