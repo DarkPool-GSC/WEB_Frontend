@@ -1,8 +1,8 @@
 <div class="signup">
-    <div class="container">
-        <div class="add-opatient-header">
+    <div class=" bg-[#20B5B5] text-white flex flex-col justify-around px-8 rounded-2xl py-8">
+        <div class="add-opatient-header mb-5">
 
-            <div class="sign-up-heading">
+            <div class="sign-up-heading mr-10">
                 Add New Doctor
             </div>
             <span (click)="onAddDoctorClose.emit()">
@@ -10,16 +10,16 @@
             </span>
         </div>
  
-        <div class="detail">
+        <div class="detail mb-4">
             <input type="email" placeholder="Email" class="placeholder" name="email" #email>
         </div>
-        <div class="detail">
+        <div class="detail mb-4">
             <input type="name" placeholder="Name" class="placeholder" name="email" #name>
         </div>
-        <div class="detail">
+        <div class="detail mb-4">
             <input type="password" placeholder="password" class="placeholder" name="password" #password>
         </div>
-        <div class="detail">
+        <div class="detail mb-4">
             <input type="text" placeholder="Specialization" class="placeholder" name="specialization" #specialization>
         </div>
         <button type="submit" (click)="createDoctor(email.value, password.value, name.value, specialization.value)"

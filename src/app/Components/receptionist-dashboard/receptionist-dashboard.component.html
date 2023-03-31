@@ -7,11 +7,14 @@
         This is what we have for you today!
     </div>
 </div>
-<div class="containermain">
-<div class="container1">
+<div class="flex flex-col lg:flex-row gap-6 justify-between items-center w-full px-8">
+<div class="flex flex-col w-1/2">
 <app-top-widgets></app-top-widgets>
 <app-list></app-list>
 </div>
-<app-doctor-widget></app-doctor-widget>
+<div class="w-1/2 flex px-6">
+
+    <app-doctor-widget class="w-full"></app-doctor-widget>
+</div>
 </div>
 </body>
